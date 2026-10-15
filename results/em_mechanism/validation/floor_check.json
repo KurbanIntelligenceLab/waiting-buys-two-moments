@@ -1,0 +1,45 @@
+{
+ "A_exact": {
+  "trajectories": 40,
+  "date_mismatches": 0,
+  "max_abs_ll_diff": 0.0,
+  "max_rel_kkt_diff": 0.0,
+  "max_abs_cell_prob_diff": 0.0,
+  "max_rel_moment_diff": 0.0,
+  "max_abs_weight_diff_at_cap": 0.0,
+  "first_cert_mismatches": 0,
+  "status_mismatches": 0,
+  "trajectories_where_floor_binds": 0,
+  "seconds_floor": 11.091169793000063,
+  "seconds_nofloor": 10.692062422000163
+ },
+ "B_finite": {
+  "trajectories": 800,
+  "date_mismatches": 0,
+  "max_abs_ll_diff": 0.0,
+  "max_rel_kkt_diff": 0.0,
+  "max_abs_cell_prob_diff": 0.0,
+  "max_rel_moment_diff": 0.0,
+  "max_abs_weight_diff_at_cap": 7.18449641811328e-290,
+  "first_cert_mismatches": 0,
+  "status_mismatches": 0,
+  "trajectories_where_floor_binds": 132,
+  "seconds_floor": 144.94986694699992,
+  "seconds_nofloor": 232.60595343399928
+ },
+ "C_beta132_1e6": {
+  "trajectories": 6,
+  "date_mismatches": 0,
+  "max_abs_ll_diff": 0.0,
+  "max_rel_kkt_diff": 0.0,
+  "max_abs_cell_prob_diff": 0.0,
+  "max_rel_moment_diff": 0.0,
+  "max_abs_weight_diff_at_cap": 1e-300,
+  "first_cert_mismatches": 0,
+  "status_mismatches": 0,
+  "trajectories_where_floor_binds": 2,
+  "seconds_floor": 39.9247461949999,
+  "seconds_nofloor": 68.97383676699974
+ },
+ "total_seconds": 509.10778379600015
+}

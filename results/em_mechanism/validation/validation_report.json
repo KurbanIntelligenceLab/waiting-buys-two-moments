@@ -1,0 +1,248 @@
+{
+ "V1": {
+  "fits_checked": 3600,
+  "all_report_exactly_K_updates": true,
+  "initial_state": "uniform 1/G = iteration 0; fit_npmle evaluates ll before each update, so max_iter=K returns the state after K updates"
+ },
+ "V2": {
+  "fits_checked": 3600,
+  "max_relative_weight_difference": 4.0480456243312384e-15,
+  "date_mismatches": 0,
+  "dates_checked": 3600
+ },
+ "V5": {
+  "max_rel_diff_batch_vs__trajectory": 1.4247547299759167e-15,
+  "max_rel_diff_batch_vs_PopulationConfig_on_grid_distribution": 1.2032391573059412e-15
+ },
+ "V3": [
+  {
+   "source": "early_stopped_robustness_raw",
+   "K": 30,
+   "n": 1200,
+   "date_mismatches": 0.0,
+   "max_abs_loglik_diff": 1.6007106751203537e-10,
+   "raw_date_mismatches": NaN,
+   "archived_failures": NaN,
+   "our_invalid": NaN,
+   "sim_seed_mismatches": NaN,
+   "date_mismatches_among_valid": NaN,
+   "validity_mismatches": NaN
+  },
+  {
+   "source": "early_stopped_robustness_raw",
+   "K": 55,
+   "n": 1200,
+   "date_mismatches": 0.0,
+   "max_abs_loglik_diff": 2.473825588822365e-10,
+   "raw_date_mismatches": NaN,
+   "archived_failures": NaN,
+   "our_invalid": NaN,
+   "sim_seed_mismatches": NaN,
+   "date_mismatches_among_valid": NaN,
+   "validity_mismatches": NaN
+  },
+  {
+   "source": "early_stopped_robustness_raw",
+   "K": 80,
+   "n": 1200,
+   "date_mismatches": 0.0,
+   "max_abs_loglik_diff": 1.4551915228366852e-10,
+   "raw_date_mismatches": NaN,
+   "archived_failures": NaN,
+   "our_invalid": NaN,
+   "sim_seed_mismatches": NaN,
+   "date_mismatches_among_valid": NaN,
+   "validity_mismatches": NaN
+  },
+  {
+   "source": "early_stopped_npmle_raw",
+   "K": 55,
+   "n": 1200,
+   "date_mismatches": 0.0,
+   "max_abs_loglik_diff": NaN,
+   "raw_date_mismatches": NaN,
+   "archived_failures": NaN,
+   "our_invalid": NaN,
+   "sim_seed_mismatches": NaN,
+   "date_mismatches_among_valid": NaN,
+   "validity_mismatches": NaN
+  },
+  {
+   "source": "main_benchmark_raw_all (npmle)",
+   "K": -1,
+   "n": 1200,
+   "date_mismatches": 31.0,
+   "max_abs_loglik_diff": NaN,
+   "raw_date_mismatches": 0.0,
+   "archived_failures": 0.0,
+   "our_invalid": 31.0,
+   "sim_seed_mismatches": NaN,
+   "date_mismatches_among_valid": NaN,
+   "validity_mismatches": NaN
+  },
+  {
+   "source": "matched_info_pairs_raw (em_30)",
+   "K": -1,
+   "n": 300,
+   "date_mismatches": NaN,
+   "max_abs_loglik_diff": NaN,
+   "raw_date_mismatches": NaN,
+   "archived_failures": NaN,
+   "our_invalid": NaN,
+   "sim_seed_mismatches": 0.0,
+   "date_mismatches_among_valid": 0.0,
+   "validity_mismatches": 0.0
+  },
+  {
+   "source": "matched_info_pairs_raw (em_55)",
+   "K": -1,
+   "n": 300,
+   "date_mismatches": NaN,
+   "max_abs_loglik_diff": NaN,
+   "raw_date_mismatches": NaN,
+   "archived_failures": NaN,
+   "our_invalid": NaN,
+   "sim_seed_mismatches": 0.0,
+   "date_mismatches_among_valid": 0.0,
+   "validity_mismatches": 0.0
+  },
+  {
+   "source": "matched_info_pairs_raw (em_80)",
+   "K": -1,
+   "n": 300,
+   "date_mismatches": NaN,
+   "max_abs_loglik_diff": NaN,
+   "raw_date_mismatches": NaN,
+   "archived_failures": NaN,
+   "our_invalid": NaN,
+   "sim_seed_mismatches": 0.0,
+   "date_mismatches_among_valid": 0.0,
+   "validity_mismatches": 0.0
+  },
+  {
+   "source": "matched_info_pairs_raw (certified_npmle)",
+   "K": -1,
+   "n": 300,
+   "date_mismatches": NaN,
+   "max_abs_loglik_diff": NaN,
+   "raw_date_mismatches": NaN,
+   "archived_failures": NaN,
+   "our_invalid": NaN,
+   "sim_seed_mismatches": 0.0,
+   "date_mismatches_among_valid": 0.0,
+   "validity_mismatches": 0.0
+  }
+ ],
+ "V4_finite": {
+  "trajectories": 60000,
+  "monotonicity_tolerance": 1e-13,
+  "trajectories_with_violations": 0,
+  "max_single_step_decrease": 3.552713678800501e-15,
+  "min_weight_over_all_records": 1e-300,
+  "max_abs_sum_minus_one": 5.551115123125784e-16,
+  "all_finite": true,
+  "min_fitted_cell_prob": 0.0003522380770675,
+  "max_abs_cell_sum_minus_one": 2.3314683517128287e-15,
+  "status_counts_full_data": {
+   "certified": 38717,
+   "cap_reached": 9283
+  },
+  "status_counts_by_N": {
+   "1000": {
+    "certified": 16961,
+    "cap_reached": 7039
+   },
+   "100000": {
+    "certified": 21756,
+    "cap_reached": 2244
+   }
+  }
+ },
+ "V6_finite": {
+  "npmle_fits": 6000,
+  "status_counts": {
+   "certified": 3589,
+   "valid_uncertified": 2271,
+   "invalid": 140
+  },
+  "kkt_median": 6.6220586450072e-09,
+  "share_kkt_le_1e8": 0.6133333333333333,
+  "share_kkt_le_1e6": 0.9976666666666667,
+  "kkt_max": 3.1781446139120817e-06,
+  "support_size_mean": 4.0525
+ },
+ "V7_finite": {
+  "pairs_compared": 6000,
+  "median_max_abs_cell_diff": 4.9430644542824975e-09,
+  "p90_max_abs_cell_diff": 5.2273694875863705e-06,
+  "median_weight_tv": 0.8687909972288783,
+  "median_welfare_curve_max_rel_diff": 0.059805236635957604,
+  "share_same_date": 0.7208333333333333,
+  "median_em_support_1e-6": 154.0,
+  "median_npmle_support": 4.0
+ },
+ "V4_population": {
+  "trajectories": 560,
+  "trajectories_with_violations": 0,
+  "max_single_step_decrease": 5.3290705182007506e-15,
+  "min_weight": 1e-300,
+  "max_abs_sum_minus_one": 4.440892098500626e-16,
+  "status_counts": {
+   "tau2_G200_continuous": {
+    "certified": 40
+   },
+   "tau2_G200_realizable": {
+    "certified": 40
+   },
+   "tau2_G400_continuous": {
+    "certified": 38,
+    "cap_reached": 2
+   },
+   "tau2_G400_realizable": {
+    "certified": 38,
+    "cap_reached": 2
+   },
+   "tau2_G800_continuous": {
+    "certified": 38,
+    "cap_reached": 2
+   },
+   "tau2_G800_realizable": {
+    "certified": 38,
+    "cap_reached": 2
+   },
+   "tau3_G200_continuous": {
+    "cap_reached": 20,
+    "certified": 20
+   },
+   "tau3_G200_realizable": {
+    "certified": 21,
+    "cap_reached": 19
+   },
+   "tau3_G400_continuous": {
+    "cap_reached": 20,
+    "certified": 20
+   },
+   "tau3_G400_realizable": {
+    "cap_reached": 20,
+    "certified": 20
+   },
+   "tau4_G200_continuous": {
+    "cap_reached": 32,
+    "certified": 8
+   },
+   "tau4_G200_realizable": {
+    "cap_reached": 32,
+    "certified": 8
+   },
+   "tau4_G400_continuous": {
+    "cap_reached": 32,
+    "certified": 8
+   },
+   "tau4_G400_realizable": {
+    "cap_reached": 31,
+    "certified": 9
+   }
+  }
+ },
+ "seconds": 395.295670042
+}

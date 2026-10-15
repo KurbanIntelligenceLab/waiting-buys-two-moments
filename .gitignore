@@ -1,0 +1,33 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.cache/
+experiments/logs/*.log
+.ipynb_checkpoints/
+data/
+paper/*.pdf
+paper/extracted.txt
+
+# LaTeX build artifacts (not source)
+paper/*.aux
+paper/*.log
+paper/*.blg
+paper/*.bbl
+paper/*.xdv
+paper/*.out
+paper/*.synctex.gz
+paper/*.fdb_latexmk
+paper/*.fls
+
+# Per-cell resume cache for the maximin sweep; the completed run is written to
+# results/r15_maximin_welfare_raw.csv, which is what gets tracked.
+results/r15_maximin_cells/
+# Per-cell resume cache for the matched-information pair run (Appendix D.3)
+results/matched_info_pairs_cells/
+# Built supplementary archive (experiments/scripts/package_supplement.py)
+dist/
+runs/
+build/
+*.egg-info/
+results/em_mechanism_snapshots/

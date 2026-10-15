@@ -1,0 +1,16 @@
+{
+  "witnesses": 87,
+  "massA_ne_1": 87,
+  "max_abs_massA_minus_1": 3.3204428789845863e-13,
+  "max_abs_massB_minus_1": 0.00033204428756641435,
+  "all_E_P_g_equal_prediction": true,
+  "all_massQ_exactly_1": true,
+  "all_moments_exact": true,
+  "all_weights_nonneg": true,
+  "all_eps_in_0_1": true,
+  "min_bernstein_lb_1_plus_g": 0.5404679660769897,
+  "all_deg_g_le_n": true,
+  "eps_values": [
+    1e-09
+  ]
+}

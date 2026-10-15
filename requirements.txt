@@ -1,0 +1,10 @@
+# Lower bounds; for the exact validated versions use constraints.txt:
+#   pip install -c constraints.txt -e ".[test]"
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+pyyaml>=6.0
+matplotlib>=3.7
+highspy>=1.7      # persistent HiGHS models for the CMS and decision-identification LPs
+mpmath>=1.3       # high-precision quadrature (wtm/quadrature.py)
+pytest>=7         # test suite

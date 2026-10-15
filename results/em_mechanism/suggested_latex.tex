@@ -1,0 +1,271 @@
+% ============================================================================
+% Suggested manuscript additions: EM trajectory and mechanism studies.
+% FOR MANUAL REVIEW BY THE AUTHORS.  Nothing here has been applied to
+% paper/main.tex, which reproduces the 2026-09-30 manuscript.
+%
+% Reference manuscript: the authors' latest PDF, received 2026-10-08
+% (23 pages; sha256 f38961e0f210b91ba25246fda1ecab2ddfb93988ca7d90d81d73b0520548746b).
+% That PDF is not stored in this repository.  Section names and quoted wording
+% below come from it.  No \label or \ref to existing manuscript objects is
+% assumed; comments mark where a cross-reference belongs.  New labels are left
+% to the authors.
+%
+% Terminology used below.  "EM55" is EM after 55 iterations.  The "endpoint" is
+% EM after the iteration cap of 10^6 updates; it is not automatically
+% converged, so its certification status is stated where it matters.  "The EM55
+% recommendation" is the allocation date chosen from the EM55 fit; that date is
+% often LATER than the endpoint's.
+%
+% Every number is verified from saved outputs by
+%   python -m experiments.em_mechanism.verify_claims
+% (results/em_mechanism/verification/claims_check.md).
+%
+% Contents
+%   1. Section 7.2 (Decision performance): revised final paragraph
+%   2. Section 8 (Conclusion): revised mechanism sentences
+%   3. Appendix C.2: replacement for "Robustness to initialization is not evaluated."
+%   4. Appendix D.3: replacement for its final sentence
+%   5. New appendix subsection (suggested placement: after D.3)
+%   6. Figure caption (mechanism figure) and compact evidence table
+% ============================================================================
+
+
+% ----------------------------------------------------------------------------
+% 1. SECTION 7.2 "Decision performance", final paragraph.
+% PLACEMENT: replaces the existing paragraph that begins
+%   "A supplementary trajectory study at tau = 2 suggests that early stopping
+%    preserves an upward bias in the estimated third moment ..."
+% WHY: the PDF's "77%" and "approximately 89%" hold conditional on the 609
+% deteriorating cases (of 660) in which the intervention is feasible; the
+% revision states the denominators and the qualifications.
+% ----------------------------------------------------------------------------
+A supplementary trajectory study at $\tau=2$ points to one channel behind the
+gap between early stopping and continued fitting on the reference
+populations.  After 55 iterations, EM's estimate of the third moment
+$m_3=\mathbb{E}[p^3]$ has a positive median error for every initialization
+tested.  Continued fitting lowers it, often below its true value.  On these
+populations the welfare loss is asymmetric in this error.  Underestimating
+$m_3$ is associated with early intervention and large regret, while moderate
+overestimation is associated with much smaller regret.  The upward bias can
+therefore help the decision without implying a more accurate estimate of the
+risk distribution.  At $N=10^3$, regret rises between iteration 55 and the
+iteration cap in 660 of 1{,}500 datasets.  Post-hoc moment interventions
+support this explanation and identify the change in $m_3$ as a major
+channel.  Keeping the 55-iteration $m_3$ while adopting the later $m_1$ and
+$m_2$ preserves the EM55 recommendation in 470 of the 609 cases where the
+intervention is feasible (77.2\%; 51 cases are infeasible).  It removes
+89.3\% of the additional regret in those cases, or 77.4\% if the infeasible
+cases count as unrepaired.  At $N=10^5$ the corresponding figure is 77 of 110
+(70.0\%).  The explanation depends on the population: the same bias raises
+regret under compatible alternatives whose optimal date is earlier.
+% Cross-reference: point to the new appendix subsection (item 5) here.
+
+
+% ----------------------------------------------------------------------------
+% 2. SECTION 8 "Conclusion".
+% PLACEMENT: replaces the sentences
+%   "The supplementary mechanism study suggests that early stopping preserves a
+%    beneficial bias in the estimated third moment, limiting costly shifts
+%    toward earlier intervention on the reference populations. This advantage
+%    is population-dependent and can reverse under compatible alternatives."
+% NOTE: the latest PDF no longer says the mechanism is unresolved; this is a
+% tightened version of its current sentences.
+% ----------------------------------------------------------------------------
+On the reference populations, moment interventions support the explanation
+that early stopping retains an upward bias in the estimated third moment.
+Under the asymmetric welfare loss observed on this benchmark, that bias
+limits costly shifts toward earlier intervention, and continued fitting often
+removes it.  The interventions identify this as a major channel, not the only
+one.  The advantage depends on the population and can reverse under
+compatible alternatives whose optimal date is earlier.
+
+
+% ----------------------------------------------------------------------------
+% 3. APPENDIX C.2 "Estimation and bootstrap aggregation".
+% PLACEMENT: replaces the sentence "Robustness to initialization is not
+% evaluated." (end of its second paragraph).  The preceding sentence, about the
+% reported procedures starting from uniform weights, still holds and stays.
+% ----------------------------------------------------------------------------
+A separate trajectory study evaluates eight initializations: uniform, three
+Beta shapes and four random full-support starts.  The 55-iteration estimate
+has lower mean squared regret than certified NPMLE for every one of them on
+this benchmark; see the appendix subsection on the trajectory and mechanism
+study.
+% Cross-reference: point to the new appendix subsection (item 5).
+
+
+% ----------------------------------------------------------------------------
+% 4. APPENDIX D.3, final paragraph ("Results and interpretation").
+% PLACEMENT: replaces the closing sentence
+%   "These results do not imply improvement on every pair or both members,
+%    establish worst-case performance over the full moment class, or explain
+%    why early stopping helps."
+% ----------------------------------------------------------------------------
+These results do not imply improvement on every pair or both members, or
+establish worst-case performance over the full moment class.  A separate
+trajectory study examines a mechanism behind the early-stopping advantage.
+% Cross-reference: point to the new appendix subsection (item 5).
+
+
+% ----------------------------------------------------------------------------
+% 5. NEW APPENDIX SUBSECTION.
+% PLACEMENT (suggested): after Appendix D.3, inside Appendix D "Supporting
+% decision-performance results", as the next subsection.  It does not exist
+% yet; choose its number and label.
+% ----------------------------------------------------------------------------
+\subsection{Trajectory and mechanism study of early-stopped EM}
+% add \label{...} of your choice
+
+\paragraph{Design.}
+We record complete EM trajectories at $\tau=2$ on the 200-point grid, with the
+same pre-failure likelihood and decision rule as the main benchmark.  Each run
+starts from one of eight initializations and stops at an iteration cap of
+$10^6$ updates.  At every recorded iteration we store the likelihood, its
+directional-derivative optimality residual, the fitted cell probabilities and
+moments, the estimated welfare curve and the selected date.  Datasets are
+shared across methods: $30$ configurations, $N\in\{10^3,10^5\}$, and $50$
+datasets per configuration.  The first 20 datasets per configuration are those
+of the main benchmark, and our implementation reproduces the archived 30-, 55-
+and 80-iteration decisions on every shared dataset.  We call the state at the
+cap the \emph{endpoint}.  The endpoint is not necessarily converged: it meets
+the $10^{-8}$ optimality certificate in 1{,}042 of 1{,}500 uniform-start runs
+at $N=10^3$ and 1{,}366 of 1{,}500 at $N=10^5$.
+
+\paragraph{Events.}
+A dataset \emph{deteriorates} if its regret under the reference population is
+higher at the endpoint than after 55 iterations.  This happens in 660 of
+1{,}500 datasets at $N=10^3$ and 110 of 1{,}500 at $N=10^5$; regret falls in
+32 and 150 datasets, respectively.  In over 92\% of deteriorating datasets the
+endpoint recommends an earlier allocation date than EM55.
+
+\paragraph{What changes, and how it differs by sample size.}
+From iteration 55 to the endpoint, the fitted $m_3$ falls by a median of about
+27\% in deteriorating datasets at both sample sizes; $m_1$ and $m_2$ change
+much less.  The two sample sizes otherwise differ.  At $N=10^3$, the fitted
+cell probabilities move farther from the true observation probabilities in
+94.4\% of deteriorating datasets, and the fitted distribution concentrates on
+a few grid points.  At $N=10^5$, they move farther from the true probabilities
+in only 20.9\%, and the support barely changes.  Fitting sampling noise
+therefore describes the change at $N=10^3$, but not at $N=10^5$.
+
+\paragraph{Prespecified tests.}
+Each test solves one linear program for the grid distribution closest in
+$L_1$ to a stated target, subject to stated equality constraints, and records
+the date it recommends.  The first test fixes the endpoint's fitted cell
+probabilities and stays as close as possible to the 55-iteration fit.  That
+one constructed distribution recommends the endpoint's date in 98.8\% of
+deteriorating datasets at $N=10^3$ and 98.2\% at $N=10^5$.  The test says
+nothing about other distributions with the same fitted probabilities.
+Freezing unidentified higher moments at their 55-iteration values is almost
+never feasible.  At $N=10^3$, freezing the masses of the risk regions that
+carry the welfare change preserves the EM55 recommendation in 5.5\% of
+feasible cases, no more than freezing irrelevant regions (5.9\%).  These
+prespecified analyses do not support an explanation through risk-region
+masses or unidentified moments.
+
+\paragraph{Post-hoc moment interventions.}
+At $\tau=2$ the fitted cell probabilities are a one-to-one function of
+$(m_1,m_2,m_3)$, so we next intervened on these moments separately; the
+evidence table below reports the results.  Keeping the 55-iteration $m_3$
+while adopting the endpoint's $m_1$ and $m_2$ preserves the EM55
+recommendation in 77.2\% of feasible deteriorating datasets at $N=10^3$ (470
+of 609; 660 attempted, 51 infeasible) and in 70.0\% at $N=10^5$ (77 of 110).
+At $N=10^3$ it removes 89.3\% of the additional regret among feasible cases,
+or 77.4\% when infeasible cases count as unrepaired.  Changing $m_1$ or $m_2$
+alone rarely moves the recommendation.
+
+\paragraph{Direction of the $m_3$ error.}
+After 55 iterations, the median relative error of $m_3$ is between $+5.3\%$
+and $+16.8\%$ at $N=10^3$, and between $+3.0\%$ and $+12.6\%$ at $N=10^5$,
+across all eight initializations.  This includes one start that begins 80\%
+below the truth.  Endpoints and certified NPMLE are approximately
+median-unbiased for $m_3$, so their estimate falls below the truth in about
+half of the datasets.  Pooled over estimators, regret is much larger after
+underestimation than after moderate overestimation.  At $N=10^3$, mean regret
+is $0.086$ for errors below $-50\%$ and $0.008$--$0.009$ for errors between
+$-10\%$ and $+50\%$; it rises again to $0.022$ for overestimates above
+$+50\%$.  Underestimation mostly leads to dates earlier than the optimum.
+Replacing the endpoint's $m_3$ with its true value preserves the EM55
+recommendation in only 30.6\% of feasible cases at $N=10^3$.  This
+explanation concerns the direction of the $m_3$ error under an asymmetric
+loss.  It does not compare the overall accuracy of the two estimates of the
+risk distribution.
+
+\paragraph{Noise-free comparison.}
+With exact observation probabilities (all trajectories certified at a cap of
+$10^7$), the recommended date changes between iteration 55 and the endpoint in
+33 configuration--initialization cases; 32 of these changes improve welfare
+under the reference population and one reduces it.
+
+\paragraph{Limitations.}
+The moment interventions were specified after the prespecified tests.
+Holding $m_3$ fixed also blocks most improvements (76.7\% and 90.7\% of
+improving datasets at $N=10^3$ and $N=10^5$), so it identifies the channel
+through which further fitting changes the recommendation, not a protective
+rule.  Distribution shape still matters: combining the endpoint's shape with
+the 55-iteration moments preserves the EM55 recommendation in only about 44\%
+of deteriorating datasets.  Different distributions with identical fitted
+probabilities can recommend different dates, but the deterioration studied
+here comes with a change in the fitted moments.  The explanation is specific
+to these reference populations at $\tau=2$.  The upper member of a compatible
+pair has an earlier optimal date in 28 of 30 pairs, and there the same bias
+increases regret.
+
+
+% ----------------------------------------------------------------------------
+% 6a. FIGURE (mechanism).
+% FILE: results/em_mechanism/figures/fig5_mechanism.pdf (copy into the
+% manuscript's figure directory).  PLACEMENT: inside the new subsection.
+% ----------------------------------------------------------------------------
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig5_mechanism.pdf}
+\caption{\textbf{One channel behind the early-stopping advantage on the
+reference populations ($\tau=2$, uniform grid with 200 points).}
+(a) Mean regret against the relative error of the fitted third moment $m_3$,
+pooling 55-iteration, endpoint and NPMLE fits.  Underestimation is associated
+with much larger regret than moderate overestimation; regret rises again for
+overestimates above $+50\%$.
+(b) Share of datasets in which $m_3$ is underestimated.
+(c) Deteriorating datasets: share of feasible constrained estimates that
+preserve the EM55 recommendation.  The first three bars keep the endpoint's
+fitted probabilities: closest to the 55-iteration fit, with frozen
+decision-relevant risk masses, and with frozen irrelevant masses.  The last
+two bars are post-hoc moment interventions (55-iteration $m_3$; true $m_3$).
+(d) Mean change in risk mass from iteration 55 to the endpoint at $N=10^3$, for
+deteriorating and improving datasets.}
+% add \label{...} of your choice
+\end{figure}
+
+
+% ----------------------------------------------------------------------------
+% 6b. COMPACT EVIDENCE TABLE.  PLACEMENT: inside the new subsection.
+% Requires booktabs (already used by the manuscript's tables).
+% ----------------------------------------------------------------------------
+\begin{table}[t]
+\centering
+\small
+\caption{\textbf{Interventions on deteriorating datasets.}  Each row solves
+one linear program.  Success means the constrained estimate preserves the
+EM55 recommendation, except in the row marked $\dagger$, where it means the
+estimate moves to the endpoint's recommendation.  Entries are
+successful/feasible (share of feasible).  Attempted cases: 660 at $N=10^3$
+and 110 at $N=10^5$.  Rows marked $*$ are post hoc.}
+% add \label{...} of your choice
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Constrained estimate & $N=10^3$ & $N=10^5$ \\
+\midrule
+Endpoint fit, closest to iteration 55 & 8/660 (1.2\%) & 2/110 (1.8\%) \\
+\quad $+$ frozen decision-relevant risk masses & 7/128 (5.5\%) & 3/75 (4.0\%) \\
+\quad $+$ frozen irrelevant risk masses & 8/136 (5.9\%) & 10/96 (10.4\%) \\
+\quad $+$ frozen $m_4$--$m_6$ & 1/2 & 0/0 \\
+$*$ Endpoint $m_1,m_2$; iteration-55 $m_3$ & 470/609 (77.2\%) & 77/110 (70.0\%) \\
+$*$ Endpoint $m_1,m_2$; true $m_3$ & 148/484 (30.6\%) & 24/110 (21.8\%) \\
+$*\dagger$ Iteration-55 fit with endpoint $m_3$ & 133/206 (64.6\%) & 28/54 (51.9\%) \\
+\midrule
+Regret increase removed by iteration-55 $m_3$ & 89.3\% & 84.8\% \\
+\quad infeasible cases counted as unrepaired & 77.4\% & 84.8\% \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,274 @@
+# Frozen benchmark definition.
+#
+# PROVENANCE.  Every value below is traceable to one of three sources, and the
+# `source` key on each block says which:
+#
+#   brief      - stated explicitly in the experiment brief (Section 3).
+#   derived    - forced by a definition the brief gives, with the derivation
+#                written out in `note`.  Not a free choice.
+#   UNRESOLVED - genuinely absent from the brief and not recoverable from any
+#                repository, history, or prior implementation (there is none on
+#                this machine).  These are NOT filled in.  See NEEDS_DECISION.md.
+#
+# Nothing in this file may be changed after benchmark results are generated.
+
+meta:
+  name: frozen_benchmark
+  version: 0.1.0-partial
+  created: 2026-08-21
+  status: |
+    Population grid COMPLETE: 5 risk distributions x 3 gamma x 2 horizons x
+    3 budget ratios = 90 cells.  The three Beta families are recovered from the
+    draft's Figure 1(c); the mixture and bimodal families are author-frozen
+    (2026-08-21) and marked as such.  The seed list remains UNRESOLVED (D3), so
+    no finite-sample cell is frozen yet.
+  spec_source: experiment brief, Sections 2-3
+  paper_source: NOT AVAILABLE on this machine (see experiments/AUDIT.md)
+
+# ---------------------------------------------------------------------------
+# Conventions.  Stated here so no aggregation downstream is ambiguous.
+# ---------------------------------------------------------------------------
+conventions:
+  welfare_efficiency:
+    source: brief
+    formula: "W^{that} / W^{t*}"
+  relative_regret:
+    source: derived
+    formula: "R(s) = 1 - W^s / W^{t*}"
+    note: |
+      The brief fixes welfare efficiency as W^{that}/W^{t*} and calls the primary
+      metric a relative quantity; relative regret is its complement.  Used
+      identically for stakes (Exp 2), ambiguity cost (Exp 6), and zeta (Exp 8).
+  stakes:
+    source: derived
+    formula: "1 - W^1 / W^{t*}"
+    note: >
+      The brief defines stakes as the relative welfare loss from acting
+      immediately rather than optimally, under the relative-regret convention
+      above.  Equals relative_regret(1).
+  allocation_dates:
+    source: derived
+    value: "s in {1, ..., T-1}"
+    note: >
+      u^T(p) = 1 - (1-p)^0 = 0 identically, so date T allocates the budget to
+      zero utility and can never be optimal.  It is excluded from the trajectory.
+  active_in_period_s:
+    source: derived
+    definition: "survived the exits at the end of periods 1..s-1; probability (1-p)^(s-1)"
+    note: >
+      Forced by the brief's own phi_{s,k}(p) = C(s,k) p^k (1-p)^(s-k) (1-p)^(s-1),
+      whose trailing factor is (1-p)^(s-1).  This pins the timing convention.
+  tie_breaking:
+    source: derived
+    value: uniform_at_random_within_y_group
+    note: >
+      y^t is integer-valued so ranking by y^t leaves ties; the mean-field
+      treatment of a partially funded group is its uniform random subset.
+
+# ---------------------------------------------------------------------------
+# Risk distributions
+# ---------------------------------------------------------------------------
+distributions:
+  resolved:
+    source: brief
+    note: "The brief states the paper's figures use exactly these three."
+    families:
+      - {family: beta, a: 1, b: 32, name: beta_1_32, label: "high inequality"}
+      - {family: beta, a: 1, b: 8,  name: beta_1_8,  label: "intermediate inequality"}
+      - {family: beta, a: 1, b: 4,  name: beta_1_4,  label: "low inequality"}
+  author_frozen:
+    source: author_frozen
+    frozen: 2026-08-21
+    note: |
+      NEW AUTHOR-DEFINED BENCHMARK PARAMETERS, frozen by the authors on
+      2026-08-21.  These are NOT recovered historical values: no prior code,
+      config or figure existed to recover them from (see experiments/AUDIT.md),
+      and the draft's Table 3 names the two families without giving parameters.
+      They must be described in the paper as chosen for this benchmark, not as
+      previously used.  Frozen before any result over them was computed; the
+      config was committed prior to the expansion run.
+    families:
+      - family: mixture
+        name: mixture_high_risk_subgroup
+        label: "small high-risk subgroup"
+        weights: [0.95, 0.05]
+        components:
+          - {family: beta, a: 1, b: 32, name: beta_1_32}
+          - {family: beta, a: 8, b: 2,  name: beta_8_2}
+        moments:
+          component_means: [0.0303030303, 0.8000000000]
+          overall_mean: 0.0687878788
+          overall_second_moment: 0.0344206774
+          overall_sd: 0.1723046868
+        rationale: >
+          A low-risk majority (95%, mean 0.030) with a 5% high-risk subgroup
+          (mean 0.800).  The majority component is exactly the existing
+          Beta(1,32) family, so the mixture isolates the effect of adding the
+          subgroup rather than changing the bulk of the population.
+      - family: mixture
+        name: bimodal
+        label: "bimodal"
+        weights: [0.5, 0.5]
+        components:
+          - {family: beta, a: 3,  b: 57, name: beta_3_57}
+          - {family: beta, a: 12, b: 28, name: beta_12_28}
+        moments:
+          component_means: [0.0500000000, 0.3000000000]
+          overall_mean: 0.1750000000
+          overall_second_moment: 0.0492003199
+          overall_sd: 0.1362913052
+        rationale: >
+          Two separated modes at 0.05 and 0.30 with equal weight.  The overall
+          mean 0.175 sits inside the range spanned by the existing Beta families
+          (0.030 to 0.200), so the family differs from them in shape rather than
+          in level.
+
+# ---------------------------------------------------------------------------
+# Population grid
+# ---------------------------------------------------------------------------
+observation_model:
+  source: brief
+  ptilde: "1 - (1-p)^gamma"
+  gamma: [1, 2, 4]
+  note: "gamma = 1 is the main text (ptilde = p)."
+
+failure_scoring:
+  source: author_frozen
+  frozen: 2026-08-28
+  convention: "no estimate => that = 1 (act immediately); welfare scored normally; n.e. still incremented"
+  rationale: |
+    The draft's Table 4 caption says no-estimate runs are "scored rather than
+    discarded".  Excluding them from the welfare quantiles contradicts that and
+    would flatter exactly the rules that fail most -- a method could raise its
+    p10 by failing on its own hard cases.  Under this convention every rule has
+    the same denominator on every metric, and n.e. becomes an additional
+    reliability measure rather than a mechanism for dropping bad runs.
+
+    The fallback is date 1 because acting immediately is the one date a planner
+    can always choose with no estimate at all: it needs no fitted distribution,
+    no identified set, and no data beyond knowing the programme has started.
+
+    Frozen before the supplementary grid so every prefix is scored identically.
+    Measured effect on the t=2 table: fourth decimal only.
+
+table4_scope:
+  source: author_frozen
+  frozen: 2026-08-27
+  gamma: 1
+  rationale: |
+    TABLE 4 IS RESTRICTED TO gamma = 1.
+
+    Three of the eight rules -- parametric Beta and both worst-case rules -- are
+    defined through the ordinary-moment representation of Lemma 1.  That
+    representation is exact only at gamma = 1, where the observable cohort
+    functionals reach degree exactly 2t-1 and the 2t moments are therefore
+    exactly identified.  At gamma = 2 and 4 the same functionals reach degree
+    gamma*t + t - 1 (measured: 5, 8, 11 at gamma=2 for t=2,3,4; 9, 14, 19 at
+    gamma=4), so "the first 2t ordinary moments" is not what the data determine
+    and recovering them solves an inconsistent system.
+
+    Pooling gamma in Table 4 would compare rules that are not all well defined
+    on the pooled cells.  This is consistent with the draft itself: Lemma 1 is
+    stated for ptilde = p, and Section 9 records the general-gamma case as open.
+
+    Enforced in code: at gamma != 1 the three moment-based rules return
+    `success = False` with reason
+    `moment_representation_undefined_for_gamma_ne_1` rather than numbers.
+
+  robustness_to_gamma: |
+    gamma = 2 and 4 are reported separately (Experiment 13), restricted to the
+    rules that fit the gamma-specific record likelihood directly and are
+    therefore well defined at any gamma: NPMLE, NNLS, and the regret-calibrated
+    rule.  Oracle and act-immediately are defined at every gamma by
+    construction.
+
+horizon:
+  source: brief
+  T: [12, 20]
+
+budget_ratio:
+  source: brief
+  beta: [0.0005, 0.002, 0.01]
+
+population_size:
+  source: brief
+  N: [1000, 5000, 20000, 100000]
+  note: "Finite-sample only; unused by Experiments 1, 2, 4, 5, 6."
+
+prefix_length:
+  source: brief
+  t: [2, 3, 4]
+
+seeds:
+  source: author_frozen
+  frozen: 2026-08-27
+  count: 20
+  list: [1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010,
+         1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020]
+  note: |
+    FROZEN at 20 seeds per finite-sample cell, chosen by the authors on
+    2026-08-27.  The explicit list is stored here and is never regenerated:
+    every experiment reads these integers, so any two experiments touching the
+    same cell see the same simulated prefixes.
+
+    Monte Carlo precision at 20 seeds, on the 90-cell grid.  Table 4 pools at
+    fixed (N, t) over 90 configurations, so the pooled sample is 90 x 20 = 1800
+    draws.  The distribution-free 95% interval for the pooled 10th percentile
+    then spans the 155th to 205th order statistics, i.e. the 8.6th to 11.4th
+    quantile -- a band of +/-1.4 quantile points around the target.  At 10 seeds
+    the band would be +/-1.9 points and at 50 seeds +/-0.9.
+
+  seed_protocol:
+    simulation_seed: |
+      For cell c and seed index i, the simulation seed is
+      sim_seed(c, i) = (int(config_id(c), 16) + seed_list[i]) mod 2**32,
+      so different cells receive different streams while the seed list stays
+      fixed and explicit.
+    rule_seed: |
+      Randomised rules draw from a SEPARATE stream,
+      rule_seed(c, i) = (sim_seed(c, i) + 2**31 - 1) mod 2**32,
+      so randomisation never consumes the simulation stream and both seeds are
+      recorded on every run (wtm/rules.py:RuleContext.rule_seed).
+
+# ---------------------------------------------------------------------------
+# Numerics
+# ---------------------------------------------------------------------------
+identification_lp:
+  source: derived
+  note: >
+    Resolutions and scan sizes are implementation choices, not paper values.
+    Experiment 4 reports bounds at every resolution so the conclusion can be
+    checked for grid dependence rather than assumed free of it.
+  grid_kind: uniform
+  grid_resolutions: [201, 501, 1001, 2001]
+  default_grid: 1001
+  solver: highs
+  n_fill: 21          # fill-fraction scan points per cutoff (upper bound)
+  n_lambda: 41        # dual-price scan points (lower bound)
+  n_refine: 12        # local refinement points around the winning scan point
+  moment_residual_tolerance: 1.0e-09
+  containment_tolerance: 1.0e-12            # strict absolute check
+  containment_relative_tolerance: 1.0e-05   # solver-tolerance allowance
+  containment_tolerance_note: |
+    Truth containment is reported twice.  The strict column uses the absolute
+    1e-12 check.  The tolerant column additionally allows a relative slack of
+    1e-05, which is the documented LP solver optimality tolerance: evaluating
+    the upper-bound LP at the TRUE distribution's own allocation returns a value
+    that sits ~1.6e-06 (relative) below the true welfare at HiGHS defaults, and
+    ABOVE it when the feasibility tolerance is tightened to 1e-09.  The sign
+    flips with the solver setting, so the miss is optimality tolerance, not
+    discretisation: it does not shrink with grid refinement (verified at
+    G = 1001, 2001, 4001; see experiments/logs/grid_refine.txt).
+    1e-05 sits far above the observed 1.6e-06 miss and far below any
+    scientifically meaningful bound width (the smallest reported is ~4e-03).
+
+reachable_date_search:
+  source: derived
+  note: >
+    Search budget is an implementation choice and is reported per the brief's
+    requirement that the budget be stated.
+  n_restarts: 24
+  max_iterations: 400
+  step_init: 0.25
+  feasibility_tolerance: 1.0e-09
+  min_mass_tolerance: -1.0e-12

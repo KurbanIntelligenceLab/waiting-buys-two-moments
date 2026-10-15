@@ -1,0 +1,16 @@
+# Snapshot-bundle analysis reproduction (2026-10-09)
+# bundle: dist/wbtm-supplement-2026.10-em-snapshots.zip; run with the build of sha256 4986bd65...; rebuilt afterwards (README text only) as sha256 9d6fa438cd9652d8a3a5438f3ef1720b0cc6c2ecc958830c449cc0e9abfe660e with identical data files (digest of all per-file sha256s 2128d7e3... in both)
+# environment: WBTM_EM_SNAPSHOTS=bundle OMP_NUM_THREADS=1, 4 workers; runs/em_mechanism not read
+# commands: mechanism --out-dir runs/mechanism_check; mechanism_posthoc --out-dir runs/mechanism_check; compare_mechanism_outputs runs/mechanism_check --v7 --maximizers
+952 events in 44 cells
+done in 18.3 min
+952 events
+  events.csv.gz: 952 rows, max abs numeric difference 0
+  constraint_tests.csv.gz: 952 rows, max abs numeric difference 0
+  posthoc_moment_tests.csv.gz: 952 rows, max abs numeric difference 0
+  population_control.csv.gz: 33 rows, max abs numeric difference 0
+  bin_selection.json: identical selections
+  V7_late_em_vs_npmle_finite.csv.gz: 6000 rows, max abs numeric difference 1.11e-16
+  maximizers_finite.csv.gz: 5145 rows, max abs numeric difference 4.44e-16
+REPRODUCED: all compared outputs match the committed ones
+EXIT 0

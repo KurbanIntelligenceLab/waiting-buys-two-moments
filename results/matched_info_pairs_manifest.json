@@ -1,0 +1,150 @@
+{
+  "artifact": "matched_info_pairs_raw.csv",
+  "artifacts": {
+    "results/matched_info_pairs_raw.csv": "0dfe73745dfcf19da2112fe2c55e3cce6e424bb61443c30cf3c00384b0fc1229"
+  },
+  "bootstrap": {
+    "attempted_per_dataset": 40,
+    "retained_max": 40,
+    "retained_min": 34,
+    "retained_total": 11802
+  },
+  "config": {
+    "path": "experiments/config/frozen_benchmark.yaml",
+    "sha256": "5f3e4cfdcc7924f0c0e75a5cebac3007589f182eb873db9001908b3d34e15b28"
+  },
+  "core_hours": 0.2565805787463877,
+  "environment": {
+    "implementation": "CPython",
+    "machine": "x86_64",
+    "packages": {
+      "highspy": "unknown",
+      "matplotlib": "3.11.2",
+      "mpmath": "1.4.1",
+      "numpy": "2.4.6",
+      "pandas": "3.0.6",
+      "scipy": "1.17.1",
+      "yaml": "6.0.1"
+    },
+    "platform": "Linux-6.18.44-fc-v51-x86_64-with-glibc2.39",
+    "python": "3.11.15"
+  },
+  "exclusions": "none at generation; the analysis keeps jointly valid trials",
+  "failures": {
+    "certified_npmle": 10,
+    "parametric_beta": 14
+  },
+  "generated_utc": "2026-10-02T12:31:06+00:00",
+  "inputs": {},
+  "n_datasets": 300,
+  "n_rows": 3000,
+  "observation_window": "A",
+  "pair_source": "extreme_pair_exact.py, tau=2 exact rational pairs",
+  "pairs": [
+    "08d96ab0defb",
+    "c8697d1800b5",
+    "9fe557d42d19",
+    "82d22f34a4dc",
+    "82fa2d570256",
+    "fad987cc30ad",
+    "645ba2bddb66",
+    "48992d9e3b43",
+    "9d58c5dce3c9",
+    "fae85d196c89",
+    "51c48458632c",
+    "fdeab5019bb9",
+    "6ee1a95c2835",
+    "d157b5b6b9b0",
+    "eeb7694df15d",
+    "1bb4f8059848",
+    "89a9f7e78122",
+    "9cc5ff7a0659",
+    "76324efe4052",
+    "d3ad67d001b3",
+    "6eb1e1952502",
+    "6a778be2d26d",
+    "f3e14f3cb88f",
+    "7ee9ad48135e",
+    "7a44ab9f6ee6",
+    "a22714b128d1",
+    "0f904f38c8bf",
+    "06380b49a6f3",
+    "67ddeab9efe8",
+    "25798ac797cd"
+  ],
+  "publication_settings": true,
+  "record_atom_count_tau4": 14,
+  "sample_sizes": [
+    1000,
+    100000
+  ],
+  "settings": {
+    "delta": 1e-08,
+    "em_iters": [
+      30,
+      55,
+      80
+    ],
+    "envelope_scan": {
+      "n_coarse": 9,
+      "n_refine": 5,
+      "n_rounds": 1
+    },
+    "lp_grid": 101,
+    "lp_scan": {
+      "n_fill": 9,
+      "n_lambda": 11,
+      "n_refine": 5,
+      "n_rounds": 1
+    },
+    "n_boot": 40,
+    "procedures": [
+      "certified_npmle",
+      "em_30",
+      "em_55",
+      "em_80",
+      "bagged_npmle",
+      "regret_calibrated",
+      "parametric_beta",
+      "achieved_welfare_lp",
+      "worst_case_envelope",
+      "maximin_welfare"
+    ],
+    "seed_policy": "sim_seed = (int(config_id(dist='pair_<config_id>', gamma=1, T, beta, N, tau=2), 16) + seed) mod 2^32; rule_seed = (sim_seed + 2^31 - 1) mod 2^32; data drawn from the lower pair member; bootstrap = default_rng(rule_seed).multinomial, n_boot draws",
+    "seeds": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005
+    ],
+    "tau": 2,
+    "version": "reconstruction-v1"
+  },
+  "solver": {
+    "envelope_scan": {
+      "n_coarse": 9,
+      "n_refine": 5,
+      "n_rounds": 1
+    },
+    "lp_grid": 101,
+    "lp_scan": {
+      "n_fill": 9,
+      "n_lambda": 11,
+      "n_refine": 5,
+      "n_rounds": 1
+    },
+    "lp_solver": "HiGHS (scipy)",
+    "npmle_delta": 1e-08,
+    "npmle_grid": 200
+  },
+  "source": {
+    "code_branch": "claude/dazzling-fermat-j5hqob",
+    "code_commit": "802dd3da98bb3ceaeba0b2a74f79e75240b49869",
+    "dirty_paths": [],
+    "kind": "git",
+    "sha256": "137c14015447f4d92bcd81f104e5054ae24cc0bbc7d50176bced99cb29f1675a",
+    "source_dirty": false
+  },
+  "version": "reconstruction-v1"
+}

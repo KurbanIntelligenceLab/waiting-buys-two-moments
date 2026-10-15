@@ -1,0 +1,363 @@
+id,value,source,description
+events_total_N1000,1500,finite/cells/ref_*_table.csv.gz,"reference datasets, uniform start"
+events_worse_N1000,660,finite/cells/ref_*_table.csv.gz,worse datasets (EM55 vs endpoint)
+events_improve_N1000,32,finite/cells/ref_*_table.csv.gz,improve datasets (EM55 vs endpoint)
+events_same_N1000,808,finite/cells/ref_*_table.csv.gz,same datasets (EM55 vs endpoint)
+events_total_N100000,1500,finite/cells/ref_*_table.csv.gz,"reference datasets, uniform start"
+events_worse_N100000,110,finite/cells/ref_*_table.csv.gz,worse datasets (EM55 vs endpoint)
+events_improve_N100000,150,finite/cells/ref_*_table.csv.gz,improve datasets (EM55 vs endpoint)
+events_same_N100000,1240,finite/cells/ref_*_table.csv.gz,same datasets (EM55 vs endpoint)
+T1_minimal_change_worse_N1000_feasible,660,mechanism/intervention_accounting.csv,T1_minimal_change: feasible of 660 worse events
+T1_minimal_change_worse_N1000_share,0.0121,mechanism/intervention_accounting.csv,T1_minimal_change: share of feasible worse events (keeps EM55 date)
+T1_minimal_change_improve_N1000_share,0.0625,mechanism/intervention_accounting.csv,T1_minimal_change: share of feasible improve events (keeps EM55 date)
+T2_freeze_m4_m6_worse_N1000_feasible,2,mechanism/intervention_accounting.csv,T2_freeze_m4_m6: feasible of 660 worse events
+T2_freeze_m4_m6_worse_N1000_share,0.5,mechanism/intervention_accounting.csv,T2_freeze_m4_m6: share of feasible worse events (keeps EM55 date)
+T2_freeze_m4_m8_worse_N1000_feasible,0,mechanism/intervention_accounting.csv,T2_freeze_m4_m8: feasible of 660 worse events
+T3_freeze_decision_bins_worse_N1000_feasible,128,mechanism/intervention_accounting.csv,T3_freeze_decision_bins: feasible of 660 worse events
+T3_freeze_decision_bins_worse_N1000_share,0.0547,mechanism/intervention_accounting.csv,T3_freeze_decision_bins: share of feasible worse events (keeps EM55 date)
+T3_freeze_decision_bins_improve_N1000_share,0.037,mechanism/intervention_accounting.csv,T3_freeze_decision_bins: share of feasible improve events (keeps EM55 date)
+T4_freeze_irrelevant_bins_worse_N1000_feasible,136,mechanism/intervention_accounting.csv,T4_freeze_irrelevant_bins: feasible of 660 worse events
+T4_freeze_irrelevant_bins_worse_N1000_share,0.0588,mechanism/intervention_accounting.csv,T4_freeze_irrelevant_bins: share of feasible worse events (keeps EM55 date)
+T4_freeze_irrelevant_bins_improve_N1000_share,0.16,mechanism/intervention_accounting.csv,T4_freeze_irrelevant_bins: share of feasible improve events (keeps EM55 date)
+T5_import_decision_bins_worse_N1000_feasible,569,mechanism/intervention_accounting.csv,T5_import_decision_bins: feasible of 660 worse events
+T5_import_decision_bins_worse_N1000_share,0.0369,mechanism/intervention_accounting.csv,T5_import_decision_bins: share of feasible worse events (moves to endpoint date)
+T5_import_decision_bins_improve_N1000_share,0.1935,mechanism/intervention_accounting.csv,T5_import_decision_bins: share of feasible improve events (moves to endpoint date)
+T1r_late_structure_55_fit_worse_N1000_feasible,660,mechanism/intervention_accounting.csv,T1r_late_structure_55_fit: feasible of 660 worse events
+T1r_late_structure_55_fit_worse_N1000_share,0.4364,mechanism/intervention_accounting.csv,T1r_late_structure_55_fit: share of feasible worse events (keeps EM55 date)
+T1r_late_structure_55_fit_improve_N1000_share,0.5625,mechanism/intervention_accounting.csv,T1r_late_structure_55_fit: share of feasible improve events (keeps EM55 date)
+Tm1_only_m1_worse_N1000_feasible,660,mechanism/intervention_accounting.csv,Tm1_only_m1: feasible of 660 worse events
+Tm1_only_m1_worse_N1000_share,0.0061,mechanism/intervention_accounting.csv,Tm1_only_m1: share of feasible worse events (moves to endpoint date)
+Tm1_only_m1_improve_N1000_share,0.0312,mechanism/intervention_accounting.csv,Tm1_only_m1: share of feasible improve events (moves to endpoint date)
+Tm2_only_m2_worse_N1000_feasible,603,mechanism/intervention_accounting.csv,Tm2_only_m2: feasible of 660 worse events
+Tm2_only_m2_worse_N1000_share,0.0746,mechanism/intervention_accounting.csv,Tm2_only_m2: share of feasible worse events (moves to endpoint date)
+Tm2_only_m2_improve_N1000_share,0.2,mechanism/intervention_accounting.csv,Tm2_only_m2: share of feasible improve events (moves to endpoint date)
+Tm3_only_m3_worse_N1000_feasible,206,mechanism/intervention_accounting.csv,Tm3_only_m3: feasible of 660 worse events
+Tm3_only_m3_worse_N1000_share,0.6456,mechanism/intervention_accounting.csv,Tm3_only_m3: share of feasible worse events (moves to endpoint date)
+Tm3_only_m3_improve_N1000_share,0.6296,mechanism/intervention_accounting.csv,Tm3_only_m3: share of feasible improve events (moves to endpoint date)
+Tno3_all_but_m3_worse_N1000_feasible,609,mechanism/intervention_accounting.csv,Tno3_all_but_m3: feasible of 660 worse events
+Tno3_all_but_m3_worse_N1000_share,0.7718,mechanism/intervention_accounting.csv,Tno3_all_but_m3: share of feasible worse events (keeps EM55 date)
+Tno3_all_but_m3_improve_N1000_share,0.7667,mechanism/intervention_accounting.csv,Tno3_all_but_m3: share of feasible improve events (keeps EM55 date)
+Ttrue3_late_with_true_m3_worse_N1000_feasible,484,mechanism/intervention_accounting.csv,Ttrue3_late_with_true_m3: feasible of 660 worse events
+Ttrue3_late_with_true_m3_worse_N1000_share,0.3058,mechanism/intervention_accounting.csv,Ttrue3_late_with_true_m3: share of feasible worse events (keeps EM55 date)
+Ttrue3_late_with_true_m3_improve_N1000_share,0.4118,mechanism/intervention_accounting.csv,Ttrue3_late_with_true_m3: share of feasible improve events (keeps EM55 date)
+T1_minimal_change_worse_N100000_feasible,110,mechanism/intervention_accounting.csv,T1_minimal_change: feasible of 110 worse events
+T1_minimal_change_worse_N100000_share,0.0182,mechanism/intervention_accounting.csv,T1_minimal_change: share of feasible worse events (keeps EM55 date)
+T1_minimal_change_improve_N100000_share,0.0333,mechanism/intervention_accounting.csv,T1_minimal_change: share of feasible improve events (keeps EM55 date)
+T2_freeze_m4_m6_worse_N100000_feasible,0,mechanism/intervention_accounting.csv,T2_freeze_m4_m6: feasible of 110 worse events
+T2_freeze_m4_m8_worse_N100000_feasible,0,mechanism/intervention_accounting.csv,T2_freeze_m4_m8: feasible of 110 worse events
+T3_freeze_decision_bins_worse_N100000_feasible,75,mechanism/intervention_accounting.csv,T3_freeze_decision_bins: feasible of 110 worse events
+T3_freeze_decision_bins_worse_N100000_share,0.04,mechanism/intervention_accounting.csv,T3_freeze_decision_bins: share of feasible worse events (keeps EM55 date)
+T3_freeze_decision_bins_improve_N100000_share,0.0067,mechanism/intervention_accounting.csv,T3_freeze_decision_bins: share of feasible improve events (keeps EM55 date)
+T4_freeze_irrelevant_bins_worse_N100000_feasible,96,mechanism/intervention_accounting.csv,T4_freeze_irrelevant_bins: feasible of 110 worse events
+T4_freeze_irrelevant_bins_worse_N100000_share,0.1042,mechanism/intervention_accounting.csv,T4_freeze_irrelevant_bins: share of feasible worse events (keeps EM55 date)
+T4_freeze_irrelevant_bins_improve_N100000_share,0.1049,mechanism/intervention_accounting.csv,T4_freeze_irrelevant_bins: share of feasible improve events (keeps EM55 date)
+T5_import_decision_bins_worse_N100000_feasible,110,mechanism/intervention_accounting.csv,T5_import_decision_bins: feasible of 110 worse events
+T5_import_decision_bins_worse_N100000_share,0.0273,mechanism/intervention_accounting.csv,T5_import_decision_bins: share of feasible worse events (moves to endpoint date)
+T5_import_decision_bins_improve_N100000_share,0.0533,mechanism/intervention_accounting.csv,T5_import_decision_bins: share of feasible improve events (moves to endpoint date)
+T1r_late_structure_55_fit_worse_N100000_feasible,110,mechanism/intervention_accounting.csv,T1r_late_structure_55_fit: feasible of 110 worse events
+T1r_late_structure_55_fit_worse_N100000_share,0.4455,mechanism/intervention_accounting.csv,T1r_late_structure_55_fit: share of feasible worse events (keeps EM55 date)
+T1r_late_structure_55_fit_improve_N100000_share,0.42,mechanism/intervention_accounting.csv,T1r_late_structure_55_fit: share of feasible improve events (keeps EM55 date)
+Tm1_only_m1_worse_N100000_feasible,110,mechanism/intervention_accounting.csv,Tm1_only_m1: feasible of 110 worse events
+Tm1_only_m1_worse_N100000_share,0.0,mechanism/intervention_accounting.csv,Tm1_only_m1: share of feasible worse events (moves to endpoint date)
+Tm1_only_m1_improve_N100000_share,0.0133,mechanism/intervention_accounting.csv,Tm1_only_m1: share of feasible improve events (moves to endpoint date)
+Tm2_only_m2_worse_N100000_feasible,110,mechanism/intervention_accounting.csv,Tm2_only_m2: feasible of 110 worse events
+Tm2_only_m2_worse_N100000_share,0.2545,mechanism/intervention_accounting.csv,Tm2_only_m2: share of feasible worse events (moves to endpoint date)
+Tm2_only_m2_improve_N100000_share,0.08,mechanism/intervention_accounting.csv,Tm2_only_m2: share of feasible improve events (moves to endpoint date)
+Tm3_only_m3_worse_N100000_feasible,54,mechanism/intervention_accounting.csv,Tm3_only_m3: feasible of 110 worse events
+Tm3_only_m3_worse_N100000_share,0.5185,mechanism/intervention_accounting.csv,Tm3_only_m3: share of feasible worse events (moves to endpoint date)
+Tm3_only_m3_improve_N100000_share,0.4765,mechanism/intervention_accounting.csv,Tm3_only_m3: share of feasible improve events (moves to endpoint date)
+Tno3_all_but_m3_worse_N100000_feasible,110,mechanism/intervention_accounting.csv,Tno3_all_but_m3: feasible of 110 worse events
+Tno3_all_but_m3_worse_N100000_share,0.7,mechanism/intervention_accounting.csv,Tno3_all_but_m3: share of feasible worse events (keeps EM55 date)
+Tno3_all_but_m3_improve_N100000_share,0.9067,mechanism/intervention_accounting.csv,Tno3_all_but_m3: share of feasible improve events (keeps EM55 date)
+Ttrue3_late_with_true_m3_worse_N100000_feasible,110,mechanism/intervention_accounting.csv,Ttrue3_late_with_true_m3: feasible of 110 worse events
+Ttrue3_late_with_true_m3_worse_N100000_share,0.2182,mechanism/intervention_accounting.csv,Ttrue3_late_with_true_m3: share of feasible worse events (keeps EM55 date)
+Ttrue3_late_with_true_m3_improve_N100000_share,0.2533,mechanism/intervention_accounting.csv,Ttrue3_late_with_true_m3: share of feasible improve events (keeps EM55 date)
+reduction_primary_N1000,0.8927,mechanism/regret_reduction.csv,"regret-increase reduction, ratio of means over 609 feasible of 660 worse events"
+reduction_altA_N1000,0.7738,mechanism/regret_reduction.csv,"same, all worse events, infeasible counted as no intervention"
+reduction_primary_N100000,0.8482,mechanism/regret_reduction.csv,"regret-increase reduction, ratio of means over 110 feasible of 110 worse events"
+reduction_altA_N100000,0.8482,mechanism/regret_reduction.csv,"same, all worse events, infeasible counted as no intervention"
+m3_relerr_em55_min_N1000,0.053,mechanism/m3_error_by_init.csv,smallest median relative m3 error at EM55 across 8 initializations
+m3_relerr_em55_max_N1000,0.168,mechanism/m3_error_by_init.csv,largest median relative m3 error at EM55 across 8 initializations
+m3_relerr_endpoint_median_range_N1000,0.016..0.018,mechanism/m3_error_by_init.csv,"median relative m3 error at the endpoint, across inits"
+m3_relerr_npmle_N1000,0.015,mechanism/m3_error_by_init.csv,NPMLE median
+m3_relerr_em55_min_N100000,0.03,mechanism/m3_error_by_init.csv,smallest median relative m3 error at EM55 across 8 initializations
+m3_relerr_em55_max_N100000,0.126,mechanism/m3_error_by_init.csv,largest median relative m3 error at EM55 across 8 initializations
+m3_relerr_endpoint_median_range_N100000,0.000..0.000,mechanism/m3_error_by_init.csv,"median relative m3 error at the endpoint, across inits"
+m3_relerr_npmle_N100000,0.0,mechanism/m3_error_by_init.csv,NPMLE median
+m3_relerr_low_init_iter0,-0.803,mechanism/m3_error_by_init.csv,"'low' start, iteration 0"
+worse_N1000_median_relchange_m1,-0.0035,mechanism/events.csv.gz,"median relative change of m1, EM55 -> endpoint, worse events"
+worse_N1000_median_relchange_m2,-0.0409,mechanism/events.csv.gz,"median relative change of m2, EM55 -> endpoint, worse events"
+worse_N1000_median_relchange_m3,-0.2702,mechanism/events.csv.gz,"median relative change of m3, EM55 -> endpoint, worse events"
+worse_N1000_median_relchange_m4,-0.5208,mechanism/events.csv.gz,"median relative change of m4, EM55 -> endpoint, worse events"
+worse_N1000_median_relchange_m6,-0.8476,mechanism/events.csv.gz,"median relative change of m6, EM55 -> endpoint, worse events"
+worse_N1000_median_relchange_m10,-0.9923,mechanism/events.csv.gz,"median relative change of m10, EM55 -> endpoint, worse events"
+worse_N1000_effsupport_55,59.5,mechanism/events.csv.gz,median effective support at EM55
+worse_N1000_effsupport_end,5.1,mechanism/events.csv.gz,median effective support at the endpoint
+worse_N1000_n99_55,90.5,mechanism/events.csv.gz,median n99 at EM55
+worse_N1000_n99_end,7.0,mechanism/events.csv.gz,median n99 at endpoint
+worse_N1000_share_kl_true_rises,0.944,mechanism/events.csv.gz,share of worse events with larger KL(true || fitted) at the endpoint
+worse_N1000_median_max_abs_dq,0.0025,mechanism/events.csv.gz,median max change of a fitted cell probability
+worse_N1000_mean_dC,0.11,mechanism/events.csv.gz,mean contrast change
+worse_N1000_max_attr_residual,0.00017,mechanism/events.csv.gz,largest |path-attribution residual|
+worse_N1000_mean_obs_part,0.1102,mechanism/events.csv.gz,mean contrast change of the T1 projection (EM55 -> projection)
+worse_N1000_mean_fiber_part,-0.0002,mechanism/events.csv.gz,mean contrast change projection -> endpoint
+worse_N1000_attr_bin0,0.0136,mechanism/events.csv.gz,mean attribution to risk bin 0
+worse_N1000_massshift_bin0,0.073,mechanism/events.csv.gz,mean mass shift in risk bin 0
+worse_N1000_attr_bin1,0.0119,mechanism/events.csv.gz,mean attribution to risk bin 1
+worse_N1000_massshift_bin1,0.001,mechanism/events.csv.gz,mean mass shift in risk bin 1
+worse_N1000_attr_bin2,0.0214,mechanism/events.csv.gz,mean attribution to risk bin 2
+worse_N1000_massshift_bin2,-0.093,mechanism/events.csv.gz,mean mass shift in risk bin 2
+worse_N1000_attr_bin3,0.0359,mechanism/events.csv.gz,mean attribution to risk bin 3
+worse_N1000_massshift_bin3,-0.055,mechanism/events.csv.gz,mean mass shift in risk bin 3
+worse_N1000_attr_bin4,0.0164,mechanism/events.csv.gz,mean attribution to risk bin 4
+worse_N1000_massshift_bin4,0.104,mechanism/events.csv.gz,mean mass shift in risk bin 4
+worse_N1000_attr_bin5,0.0108,mechanism/events.csv.gz,mean attribution to risk bin 5
+worse_N1000_massshift_bin5,-0.03,mechanism/events.csv.gz,mean mass shift in risk bin 5
+worse_N1000_kstar_median,1725,mechanism/events.csv.gz,median switch iteration
+worse_N1000_kstar_q25,214,mechanism/events.csv.gz,switch iteration q25
+worse_N1000_kstar_q75,13630,mechanism/events.csv.gz,switch iteration q75
+worse_N1000_datepair_2to1,191,mechanism/events.csv.gz,worse events moving 2->1
+worse_N1000_datepair_4to1,172,mechanism/events.csv.gz,worse events moving 4->1
+worse_N1000_datepair_3to1,123,mechanism/events.csv.gz,worse events moving 3->1
+worse_N1000_share_earlier,0.924,mechanism/events.csv.gz,share of worse events whose endpoint date is earlier than EM55's
+worse_N100000_median_relchange_m1,-0.0056,mechanism/events.csv.gz,"median relative change of m1, EM55 -> endpoint, worse events"
+worse_N100000_median_relchange_m2,-0.0694,mechanism/events.csv.gz,"median relative change of m2, EM55 -> endpoint, worse events"
+worse_N100000_median_relchange_m3,-0.2672,mechanism/events.csv.gz,"median relative change of m3, EM55 -> endpoint, worse events"
+worse_N100000_median_relchange_m4,-0.5186,mechanism/events.csv.gz,"median relative change of m4, EM55 -> endpoint, worse events"
+worse_N100000_median_relchange_m6,-0.8556,mechanism/events.csv.gz,"median relative change of m6, EM55 -> endpoint, worse events"
+worse_N100000_median_relchange_m10,-0.9951,mechanism/events.csv.gz,"median relative change of m10, EM55 -> endpoint, worse events"
+worse_N100000_effsupport_55,17.9,mechanism/events.csv.gz,median effective support at EM55
+worse_N100000_effsupport_end,16.8,mechanism/events.csv.gz,median effective support at the endpoint
+worse_N100000_n99_55,30.0,mechanism/events.csv.gz,median n99 at EM55
+worse_N100000_n99_end,22.0,mechanism/events.csv.gz,median n99 at endpoint
+worse_N100000_share_kl_true_rises,0.209,mechanism/events.csv.gz,share of worse events with larger KL(true || fitted) at the endpoint
+worse_N100000_median_max_abs_dq,0.00051,mechanism/events.csv.gz,median max change of a fitted cell probability
+worse_N100000_mean_dC,0.071,mechanism/events.csv.gz,mean contrast change
+worse_N100000_max_attr_residual,1.6e-05,mechanism/events.csv.gz,largest |path-attribution residual|
+worse_N100000_mean_obs_part,0.0723,mechanism/events.csv.gz,mean contrast change of the T1 projection (EM55 -> projection)
+worse_N100000_mean_fiber_part,-0.0009,mechanism/events.csv.gz,mean contrast change projection -> endpoint
+worse_N100000_attr_bin0,0.0084,mechanism/events.csv.gz,mean attribution to risk bin 0
+worse_N100000_massshift_bin0,0.032,mechanism/events.csv.gz,mean mass shift in risk bin 0
+worse_N100000_attr_bin1,0.0092,mechanism/events.csv.gz,mean attribution to risk bin 1
+worse_N100000_massshift_bin1,-0.075,mechanism/events.csv.gz,mean mass shift in risk bin 1
+worse_N100000_attr_bin2,0.0048,mechanism/events.csv.gz,mean attribution to risk bin 2
+worse_N100000_massshift_bin2,0.069,mechanism/events.csv.gz,mean mass shift in risk bin 2
+worse_N100000_attr_bin3,0.0332,mechanism/events.csv.gz,mean attribution to risk bin 3
+worse_N100000_massshift_bin3,-0.051,mechanism/events.csv.gz,mean mass shift in risk bin 3
+worse_N100000_attr_bin4,0.009,mechanism/events.csv.gz,mean attribution to risk bin 4
+worse_N100000_massshift_bin4,0.036,mechanism/events.csv.gz,mean mass shift in risk bin 4
+worse_N100000_attr_bin5,0.0068,mechanism/events.csv.gz,mean attribution to risk bin 5
+worse_N100000_massshift_bin5,-0.01,mechanism/events.csv.gz,mean mass shift in risk bin 5
+worse_N100000_kstar_median,14663,mechanism/events.csv.gz,median switch iteration
+worse_N100000_kstar_q25,2181,mechanism/events.csv.gz,switch iteration q25
+worse_N100000_kstar_q75,98695,mechanism/events.csv.gz,switch iteration q75
+worse_N100000_datepair_4to2,40,mechanism/events.csv.gz,worse events moving 4->2
+worse_N100000_datepair_5to1,21,mechanism/events.csv.gz,worse events moving 5->1
+worse_N100000_datepair_2to1,12,mechanism/events.csv.gz,worse events moving 2->1
+worse_N100000_share_earlier,0.927,mechanism/events.csv.gz,share of worse events whose endpoint date is earlier than EM55's
+"asym_N1000_(-1.0, -0.5]",0.086,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (-1.0, -0.5] (all estimators pooled; n = 1109)"
+"asym_early_N1000_(-1.0, -0.5]",0.771,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N1000_(-0.5, -0.25]",0.0354,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (-0.5, -0.25] (all estimators pooled; n = 3101)"
+"asym_early_N1000_(-0.5, -0.25]",0.558,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N1000_(-0.25, -0.1]",0.0168,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (-0.25, -0.1] (all estimators pooled; n = 3795)"
+"asym_early_N1000_(-0.25, -0.1]",0.352,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N1000_(-0.1, 0.0]",0.0091,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (-0.1, 0.0] (all estimators pooled; n = 2914)"
+"asym_early_N1000_(-0.1, 0.0]",0.226,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N1000_(0.0, 0.1]",0.0084,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (0.0, 0.1] (all estimators pooled; n = 3167)"
+"asym_early_N1000_(0.0, 0.1]",0.187,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N1000_(0.1, 0.25]",0.009,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (0.1, 0.25] (all estimators pooled; n = 3544)"
+"asym_early_N1000_(0.1, 0.25]",0.194,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N1000_(0.25, 0.5]",0.009,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (0.25, 0.5] (all estimators pooled; n = 3493)"
+"asym_early_N1000_(0.25, 0.5]",0.22,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N1000_(0.5, 10.0]",0.0219,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (0.5, 10.0] (all estimators pooled; n = 3775)"
+"asym_early_N1000_(0.5, 10.0]",0.346,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N100000_(-0.5, -0.25]",0.048,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (-0.5, -0.25] (all estimators pooled; n = 556)"
+"asym_early_N100000_(-0.5, -0.25]",0.642,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N100000_(-0.25, -0.1]",0.0084,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (-0.25, -0.1] (all estimators pooled; n = 1942)"
+"asym_early_N100000_(-0.25, -0.1]",0.32,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N100000_(-0.1, 0.0]",0.0006,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (-0.1, 0.0] (all estimators pooled; n = 5751)"
+"asym_early_N100000_(-0.1, 0.0]",0.079,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N100000_(0.0, 0.1]",0.0004,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (0.0, 0.1] (all estimators pooled; n = 10795)"
+"asym_early_N100000_(0.0, 0.1]",0.084,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N100000_(0.1, 0.25]",0.0012,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (0.1, 0.25] (all estimators pooled; n = 4218)"
+"asym_early_N100000_(0.1, 0.25]",0.165,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N100000_(0.25, 0.5]",0.0024,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (0.25, 0.5] (all estimators pooled; n = 1155)"
+"asym_early_N100000_(0.25, 0.5]",0.194,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+"asym_N100000_(0.5, 10.0]",0.0064,mechanism/regret_by_m3_error.csv,"mean regret, m3 error bin (0.5, 10.0] (all estimators pooled; n = 1083)"
+"asym_early_N100000_(0.5, 10.0]",0.239,mechanism/regret_by_m3_error.csv,share of decisions earlier than t*
+bias_EM55_N1000_share_under,0.3647,mechanism/m3_bias_by_estimator.csv,share of datasets with m3 underestimated
+bias_EM55_N1000_too_early,0.1482,mechanism/m3_bias_by_estimator.csv,share of decisions earlier than t*
+bias_EM_cap_N1000_share_under,0.4844,mechanism/m3_bias_by_estimator.csv,share of datasets with m3 underestimated
+bias_EM_cap_N1000_too_early,0.4785,mechanism/m3_bias_by_estimator.csv,share of decisions earlier than t*
+bias_NPMLE_N1000_share_under,0.4867,mechanism/m3_bias_by_estimator.csv,share of datasets with m3 underestimated
+bias_NPMLE_N1000_too_early,0.5487,mechanism/m3_bias_by_estimator.csv,share of decisions earlier than t*
+bias_EM55_N100000_share_under,0.1265,mechanism/m3_bias_by_estimator.csv,share of datasets with m3 underestimated
+bias_EM55_N100000_too_early,0.1375,mechanism/m3_bias_by_estimator.csv,share of decisions earlier than t*
+bias_EM_cap_N100000_share_under,0.4985,mechanism/m3_bias_by_estimator.csv,share of datasets with m3 underestimated
+bias_EM_cap_N100000_too_early,0.1124,mechanism/m3_bias_by_estimator.csv,share of decisions earlier than t*
+bias_NPMLE_N100000_share_under,0.4993,mechanism/m3_bias_by_estimator.csv,share of datasets with m3 underestimated
+bias_NPMLE_N100000_too_early,0.3533,mechanism/m3_bias_by_estimator.csv,share of decisions earlier than t*
+noisefree_date_changes,33,mechanism/population_control.csv.gz,"exact probabilities, tau=2, G=200: (config, init) with a date change EM55 -> endpoint"
+noisefree_improve,32,mechanism/population_control.csv.gz,improve among those
+noisefree_worse,1,mechanism/population_control.csv.gz,worse among those
+noisefree_improve_median_relchange_m3,-0.1539,mechanism/population_control.csv.gz,"median relative m3 change, improve cases"
+noisefree_improve_effsupport,58.4->57.4,mechanism/population_control.csv.gz,median effective support EM55 -> endpoint
+noisefree_tau2_G200_certified,40,population/tau2_G200_continuous_status.csv,of 40 trajectories certified (KKT <= 1e-8) at the 1e7 cap
+noisefree_configs_endpoint_worse_than_55,1,analysis/population_H1_by_init.csv,sum over 8 inits of configs where endpoint regret > EM55 regret
+pairs_upper_earlier_than_P,28,mechanism/pair_member_optimal_dates.csv,"of 30 pairs, upper member's earliest optimal date earlier than P's"
+pairs_lower_equal_P,24,mechanism/pair_member_optimal_dates.csv,"of 30 pairs, lower member's earliest optimal date equal to P's"
+pairs_lower_geq_P,30,mechanism/pair_member_optimal_dates.csv,"of 30 pairs, lower member's earliest optimal date >= P's"
+pairs_upper_larger_m4,30,mechanism/pair_member_optimal_dates.csv,"of 30 pairs, upper member has the larger m4"
+pair_EM55_N1000_rho_max_of_member_means,0.0355,analysis/finite_pair_risk.csv,EM55 rho_max_of_member_means
+pair_EM55_N1000_mean_regret_lower,0.0058,analysis/finite_pair_risk.csv,EM55 mean_regret_lower
+pair_EM55_N1000_mean_regret_upper,0.0343,analysis/finite_pair_risk.csv,EM55 mean_regret_upper
+pair_EM55_N1000_mean_regret_ref,0.002,analysis/finite_pair_risk.csv,EM55 mean_regret_ref
+pair_NPMLE_N1000_rho_max_of_member_means,0.0633,analysis/finite_pair_risk.csv,NPMLE rho_max_of_member_means
+pair_NPMLE_N1000_mean_regret_lower,0.0615,analysis/finite_pair_risk.csv,NPMLE mean_regret_lower
+pair_NPMLE_N1000_mean_regret_upper,0.0142,analysis/finite_pair_risk.csv,NPMLE mean_regret_upper
+pair_NPMLE_N1000_mean_regret_ref,0.0364,analysis/finite_pair_risk.csv,NPMLE mean_regret_ref
+pair_EM_cap_N1000_rho_max_of_member_means,0.0555,analysis/finite_pair_risk.csv,EM_cap rho_max_of_member_means
+pair_EM_cap_N1000_mean_regret_lower,0.0536,analysis/finite_pair_risk.csv,EM_cap mean_regret_lower
+pair_EM_cap_N1000_mean_regret_upper,0.0162,analysis/finite_pair_risk.csv,EM_cap mean_regret_upper
+pair_EM_cap_N1000_mean_regret_ref,0.0329,analysis/finite_pair_risk.csv,EM_cap mean_regret_ref
+pair_EM55_N100000_rho_max_of_member_means,0.0344,analysis/finite_pair_risk.csv,EM55 rho_max_of_member_means
+pair_EM55_N100000_mean_regret_lower,0.0044,analysis/finite_pair_risk.csv,EM55 mean_regret_lower
+pair_EM55_N100000_mean_regret_upper,0.0325,analysis/finite_pair_risk.csv,EM55 mean_regret_upper
+pair_EM55_N100000_mean_regret_ref,0.0007,analysis/finite_pair_risk.csv,EM55 mean_regret_ref
+pair_NPMLE_N100000_rho_max_of_member_means,0.0365,analysis/finite_pair_risk.csv,NPMLE rho_max_of_member_means
+pair_NPMLE_N100000_mean_regret_lower,0.0233,analysis/finite_pair_risk.csv,NPMLE mean_regret_lower
+pair_NPMLE_N100000_mean_regret_upper,0.0242,analysis/finite_pair_risk.csv,NPMLE mean_regret_upper
+pair_NPMLE_N100000_mean_regret_ref,0.0127,analysis/finite_pair_risk.csv,NPMLE mean_regret_ref
+pair_EM_cap_N100000_rho_max_of_member_means,0.0292,analysis/finite_pair_risk.csv,EM_cap rho_max_of_member_means
+pair_EM_cap_N100000_mean_regret_lower,0.0077,analysis/finite_pair_risk.csv,EM_cap mean_regret_lower
+pair_EM_cap_N100000_mean_regret_upper,0.0277,analysis/finite_pair_risk.csv,EM_cap mean_regret_upper
+pair_EM_cap_N100000_mean_regret_ref,0.0032,analysis/finite_pair_risk.csv,EM_cap mean_regret_ref
+pair_rho_diff_EM55_N1000,"-0.0278 [-0.0308, -0.0248]",analysis/finite_pair_risk_diff.csv,"rho(EM55) - rho(NPMLE), 95% within-pair bootstrap"
+pair_rho_diff_EM55_N100000,"-0.0021 [-0.0040, -0.0006]",analysis/finite_pair_risk_diff.csv,"rho(EM55) - rho(NPMLE), 95% within-pair bootstrap"
+msr_diff_EM30[uniform] - NPMLE_N1000,"-4.29 [-7.34, -1.87]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM55[uniform] - NPMLE_N1000,"-4.27 [-7.00, -1.99]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM80[uniform] - NPMLE_N1000,"-4.22 [-6.99, -1.86]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM_cap[uniform] - NPMLE_N1000,"-0.42 [-0.91, -0.08]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM_CV[uniform] - NPMLE_N1000,"-3.17 [-5.31, -1.53]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM55[uniform] - EM_cap[uniform]_N1000,"-3.85 [-6.63, -1.64]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM55[mean of 7 non-uniform inits] - NPMLE_N1000,"-4.24 [-7.02, -1.99]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM30[uniform] - NPMLE_N100000,"-1.37 [-2.83, -0.26]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM55[uniform] - NPMLE_N100000,"-1.41 [-2.93, -0.23]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM80[uniform] - NPMLE_N100000,"-1.41 [-2.85, -0.25]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM_cap[uniform] - NPMLE_N100000,"-1.15 [-2.39, -0.18]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM_CV[uniform] - NPMLE_N100000,"-1.34 [-2.77, -0.28]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM55[uniform] - EM_cap[uniform]_N100000,"-0.26 [-0.59, -0.04]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_diff_EM55[mean of 7 non-uniform inits] - NPMLE_N100000,"-1.40 [-2.79, -0.27]",analysis/finite_headline_inference.csv,"MSR x1e3 difference, cluster bootstrap 95%"
+msr_NPMLE_N1000,4.466,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM0_init_N1000,6.987,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM30_N1000,0.18,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM55_N1000,0.196,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM80_N1000,0.248,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM_CV_N1000,1.293,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM_cap_N1000,4.043,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_NPMLE_N100000,1.415,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM0_init_N100000,6.987,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM30_N100000,0.047,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM55_N100000,0.004,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM80_N100000,0.003,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM_CV_N100000,0.073,analysis/finite_summary_by_init.csv,MSR x1e3
+msr_EM_cap_N100000,0.261,analysis/finite_summary_by_init.csv,MSR x1e3
+pop_tau2G200_init_range,0.0276..0.0526,analysis/population_H1_by_init.csv,"mean regret under P across 8 inits (init), tau=2 G=200 continuous"
+pop_tau2G200_EM55_range,0.0004..0.0019,analysis/population_H1_by_init.csv,"mean regret under P across 8 inits (EM55), tau=2 G=200 continuous"
+pop_tau2G200_endpoint_range,0.0000..0.0014,analysis/population_H1_by_init.csv,"mean regret under P across 8 inits (endpoint), tau=2 G=200 continuous"
+pop_tau2G200_configs_endpoint_worse_by_init,0..1,analysis/population_H1_by_init.csv,"configs (of 30) where endpoint regret > EM55 regret, per init"
+pop_tau2G200_endpoint_regret_range,0.0000..0.0014,analysis/population_H1_by_init.csv,endpoint mean regret across inits
+pop_tau2G400_configs_endpoint_worse_by_init,0..0,analysis/population_H1_by_init.csv,"configs (of 30) where endpoint regret > EM55 regret, per init"
+pop_tau2G400_endpoint_regret_range,0.0000..0.0002,analysis/population_H1_by_init.csv,endpoint mean regret across inits
+pop_tau2G800_configs_endpoint_worse_by_init,0..0,analysis/population_H1_by_init.csv,"configs (of 30) where endpoint regret > EM55 regret, per init"
+pop_tau2G800_endpoint_regret_range,0.0000..0.0002,analysis/population_H1_by_init.csv,endpoint mean regret across inits
+pop_tau3G200_configs_endpoint_worse_by_init,1..1,analysis/population_H1_by_init.csv,"configs (of 30) where endpoint regret > EM55 regret, per init"
+pop_tau3G200_endpoint_regret_range,0.0000..0.0001,analysis/population_H1_by_init.csv,endpoint mean regret across inits
+pop_tau3G400_configs_endpoint_worse_by_init,1..1,analysis/population_H1_by_init.csv,"configs (of 30) where endpoint regret > EM55 regret, per init"
+pop_tau3G400_endpoint_regret_range,0.0000..0.0000,analysis/population_H1_by_init.csv,endpoint mean regret across inits
+pop_tau4G200_configs_endpoint_worse_by_init,1..1,analysis/population_H1_by_init.csv,"configs (of 30) where endpoint regret > EM55 regret, per init"
+pop_tau4G200_endpoint_regret_range,0.0000..0.0000,analysis/population_H1_by_init.csv,endpoint mean regret across inits
+pop_tau4G400_configs_endpoint_worse_by_init,1..1,analysis/population_H1_by_init.csv,"configs (of 30) where endpoint regret > EM55 regret, per init"
+pop_tau4G400_endpoint_regret_range,0.0000..0.0000,analysis/population_H1_by_init.csv,endpoint mean regret across inits
+pop_npmle_tau2G200,0.0033,analysis/population_npmle.csv,"NPMLE regret under P (delta 1e-8), mean over 30 configs"
+pop_npmle_tau2G400,0.0246,analysis/population_npmle.csv,"NPMLE regret under P (delta 1e-8), mean over 30 configs"
+pop_npmle_tau2G800,0.0271,analysis/population_npmle.csv,"NPMLE regret under P (delta 1e-8), mean over 30 configs"
+pop_npmle_tau3G200,0.0015,analysis/population_npmle.csv,"NPMLE regret under P (delta 1e-8), mean over 30 configs"
+pop_npmle_tau3G400,0.0003,analysis/population_npmle.csv,"NPMLE regret under P (delta 1e-8), mean over 30 configs"
+pop_npmle_tau4G200,0.0,analysis/population_npmle.csv,"NPMLE regret under P (delta 1e-8), mean over 30 configs"
+pop_npmle_tau4G400,0.0,analysis/population_npmle.csv,"NPMLE regret under P (delta 1e-8), mean over 30 configs"
+pop_certified_tau2G200,40,analysis/population_status_counts.csv,certified of 40 at the cap
+pop_certified_tau2G400,38,analysis/population_status_counts.csv,certified of 40 at the cap
+pop_certified_tau2G800,38,analysis/population_status_counts.csv,certified of 40 at the cap
+pop_certified_tau3G200,20,analysis/population_status_counts.csv,certified of 40 at the cap
+pop_certified_tau3G400,20,analysis/population_status_counts.csv,certified of 40 at the cap
+pop_certified_tau4G200,8,analysis/population_status_counts.csv,certified of 40 at the cap
+pop_certified_tau4G400,8,analysis/population_status_counts.csv,certified of 40 at the cap
+pop_tau2_max_kl_grid_optimum,2.9e-15,analysis/population_grid_mismatch.csv,"max KL(target || NPMLE fit), tau=2, all grids"
+maximizers_population_rows,3360,analysis/maximizers_summary.json,rows
+maximizers_population_median_kkt_em,3.1086244689504383e-15,analysis/maximizers_summary.json,median_kkt_em
+maximizers_population_median_kkt_npmle_tightest,1.614054023768574e-08,analysis/maximizers_summary.json,median_kkt_npmle_tightest
+maximizers_population_share_npmle_tightest_certified,0.0,analysis/maximizers_summary.json,share_npmle_tightest_certified
+maximizers_population_share_npmle_date_changes_1e-8_to_tightest,0.06666666666666667,analysis/maximizers_summary.json,share_npmle_date_changes_1e-8_to_tightest
+maximizers_population_median_max_abs_cell_diff_em_vs_npmle,1.2232021312508223e-08,analysis/maximizers_summary.json,median_max_abs_cell_diff_em_vs_npmle
+maximizers_population_max_max_abs_cell_diff_em_vs_npmle,9.325817715358231e-06,analysis/maximizers_summary.json,max_max_abs_cell_diff_em_vs_npmle
+maximizers_population_rev_max_feas_resid,1.1102230246251565e-16,analysis/maximizers_summary.json,rev_max_feas_resid
+maximizers_population_rev_max_abs_ll_minus_em,4.440892098500626e-16,analysis/maximizers_summary.json,rev_max_abs_ll_minus_em
+maximizers_finite_rows,5145,analysis/maximizers_summary.json,rows
+maximizers_finite_median_kkt_em,6.661338147750939e-16,analysis/maximizers_summary.json,median_kkt_em
+maximizers_finite_median_kkt_npmle_tightest,1.2732243776554242e-08,analysis/maximizers_summary.json,median_kkt_npmle_tightest
+maximizers_finite_share_npmle_tightest_certified,0.0007774538386783285,analysis/maximizers_summary.json,share_npmle_tightest_certified
+maximizers_finite_share_npmle_date_changes_1e-8_to_tightest,0.01924198250728863,analysis/maximizers_summary.json,share_npmle_date_changes_1e-8_to_tightest
+maximizers_finite_median_max_abs_cell_diff_em_vs_npmle,6.906891170110896e-09,analysis/maximizers_summary.json,median_max_abs_cell_diff_em_vs_npmle
+maximizers_finite_max_max_abs_cell_diff_em_vs_npmle,9.293890839268126e-05,analysis/maximizers_summary.json,max_max_abs_cell_diff_em_vs_npmle
+maximizers_finite_rev_max_feas_resid,1.9226625500023964e-12,analysis/maximizers_summary.json,rev_max_feas_resid
+maximizers_finite_rev_max_abs_ll_minus_em,3.5569880374453078e-12,analysis/maximizers_summary.json,rev_max_abs_ll_minus_em
+witness_population_certified_rows,2076,analysis/maximizers_population.csv.gz,rows with endpoint KKT <= 1e-8
+witness_population_disagreements,601,analysis/maximizers_population.csv.gz,certified endpoint date != NPMLE date
+witness_population_rev_selects_npmle_date,601,analysis/maximizers_population.csv.gz,"reverse witness (endpoint's fitted cells, L1-closest to NPMLE) selects NPMLE date"
+witness_finite_certified_rows,4003,analysis/maximizers_finite.csv.gz,rows with endpoint KKT <= 1e-8
+witness_finite_disagreements,1182,analysis/maximizers_finite.csv.gz,certified endpoint date != NPMLE date
+witness_finite_rev_selects_npmle_date,1182,analysis/maximizers_finite.csv.gz,"reverse witness (endpoint's fitted cells, L1-closest to NPMLE) selects NPMLE date"
+pop_certified_endpoints_init_dependent_dates,5,population/tau2_G200_continuous_*,configs (of 30) where certified endpoints from different inits select different dates
+path_argmin_iter_range_N1000,16..37,analysis/finite_path_by_config.csv.gz,"iteration minimizing pooled MSR, range across inits"
+path_argmin_iter_range_N100000,25..1778,analysis/finite_path_by_config.csv.gz,"iteration minimizing pooled MSR, range across inits"
+share_change_after55_N1000,0.478,analysis/finite_path_changes.csv.gz,share of trajectories (all inits) changing date after k=55
+share_change_after55_N100000,0.202,analysis/finite_path_changes.csv.gz,share of trajectories (all inits) changing date after k=55
+family_beta132_share_N1000,0.672,analysis/finite_by_family.csv,"Beta(1,32) share of the sum of per-family EM55-NPMLE MSR differences"
+family_beta132_share_N100000,0.984,analysis/finite_by_family.csv,"Beta(1,32) share of the sum of per-family EM55-NPMLE MSR differences"
+reversal_EM55_high_N1000,28/0/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_low_N1000,28/1/1,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_middle_N1000,28/1/1,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_rand1_N1000,28/0/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_rand2_N1000,28/1/1,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_rand3_N1000,28/0/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_rand4_N1000,28/0/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_uniform_N1000,28/0/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_high_N100000,18/10/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_low_N100000,17/11/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_middle_N100000,17/11/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_rand1_N100000,18/10/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_rand2_N100000,17/10/3,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_rand3_N100000,18/10/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_rand4_N100000,18/10/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+reversal_EM55_uniform_N100000,18/10/2,analysis/finite_reversal_counts.csv,configs EM55 better / tie / worse than NPMLE
+grid_EM55_G200_N1000,0.0364,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_EM_cap_G200_N1000,2.6018,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_NPMLE_G200_N1000,2.9739,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_EM55_G200_N100000,0.011,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_EM_cap_G200_N100000,0.2694,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_NPMLE_G200_N100000,1.0842,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_EM55_G400_N1000,0.0337,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_EM_cap_G400_N1000,2.6036,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_NPMLE_G400_N1000,9.2928,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_EM55_G400_N100000,0.0002,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_EM_cap_G400_N100000,0.1022,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_NPMLE_G400_N100000,5.992,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_EM55_G800_N1000,0.0323,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_EM_cap_G800_N1000,2.5583,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_NPMLE_G800_N1000,6.0661,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_EM55_G800_N100000,0.0002,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_EM_cap_G800_N100000,0.1022,analysis/grid_refinement_finite.csv,MSR x1e3
+grid_NPMLE_G800_N100000,6.6414,analysis/grid_refinement_finite.csv,MSR x1e3
+cv_median_iter_uniform_N1000,31.0,analysis/finite_summary_by_init.csv,CV median k
+cv_median_iter_uniform_N100000,355.0,analysis/finite_summary_by_init.csv,CV median k

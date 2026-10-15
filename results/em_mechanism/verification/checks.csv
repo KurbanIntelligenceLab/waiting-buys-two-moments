@@ -1,0 +1,150 @@
+id,pass,detail
+events_660_110,True,"worse = 660, 110"
+events_32_150,True,"improve = 32, 150"
+worse_all_change_date,True,every worse/improve event has a different date at EM55 and at the endpoint
+events_file_matches_tables,True,mechanism/events.csv.gz rows 952 agree with the finite tables
+attempted_T1_minimal_change_N1000_improve,True,T1_minimal_change attempted 32 = events 32
+attempted_T1_minimal_change_N1000_worse,True,T1_minimal_change attempted 660 = events 660
+attempted_T1_minimal_change_N100000_improve,True,T1_minimal_change attempted 150 = events 150
+attempted_T1_minimal_change_N100000_worse,True,T1_minimal_change attempted 110 = events 110
+attempted_T2_freeze_m4_m6_N1000_improve,True,T2_freeze_m4_m6 attempted 32 = events 32
+attempted_T2_freeze_m4_m6_N1000_worse,True,T2_freeze_m4_m6 attempted 660 = events 660
+attempted_T2_freeze_m4_m6_N100000_improve,True,T2_freeze_m4_m6 attempted 150 = events 150
+attempted_T2_freeze_m4_m6_N100000_worse,True,T2_freeze_m4_m6 attempted 110 = events 110
+attempted_T2_freeze_m4_m8_N1000_improve,True,T2_freeze_m4_m8 attempted 32 = events 32
+attempted_T2_freeze_m4_m8_N1000_worse,True,T2_freeze_m4_m8 attempted 660 = events 660
+attempted_T2_freeze_m4_m8_N100000_improve,True,T2_freeze_m4_m8 attempted 150 = events 150
+attempted_T2_freeze_m4_m8_N100000_worse,True,T2_freeze_m4_m8 attempted 110 = events 110
+attempted_T3_freeze_decision_bins_N1000_improve,True,T3_freeze_decision_bins attempted 32 = events 32
+attempted_T3_freeze_decision_bins_N1000_worse,True,T3_freeze_decision_bins attempted 660 = events 660
+attempted_T3_freeze_decision_bins_N100000_improve,True,T3_freeze_decision_bins attempted 150 = events 150
+attempted_T3_freeze_decision_bins_N100000_worse,True,T3_freeze_decision_bins attempted 110 = events 110
+attempted_T4_freeze_irrelevant_bins_N1000_improve,True,T4_freeze_irrelevant_bins attempted 32 = events 32
+attempted_T4_freeze_irrelevant_bins_N1000_worse,True,T4_freeze_irrelevant_bins attempted 660 = events 660
+attempted_T4_freeze_irrelevant_bins_N100000_improve,True,T4_freeze_irrelevant_bins attempted 150 = events 150
+attempted_T4_freeze_irrelevant_bins_N100000_worse,True,T4_freeze_irrelevant_bins attempted 110 = events 110
+attempted_T5_import_decision_bins_N1000_improve,True,T5_import_decision_bins attempted 32 = events 32
+attempted_T5_import_decision_bins_N1000_worse,True,T5_import_decision_bins attempted 660 = events 660
+attempted_T5_import_decision_bins_N100000_improve,True,T5_import_decision_bins attempted 150 = events 150
+attempted_T5_import_decision_bins_N100000_worse,True,T5_import_decision_bins attempted 110 = events 110
+attempted_T1r_late_structure_55_fit_N1000_improve,True,T1r_late_structure_55_fit attempted 32 = events 32
+attempted_T1r_late_structure_55_fit_N1000_worse,True,T1r_late_structure_55_fit attempted 660 = events 660
+attempted_T1r_late_structure_55_fit_N100000_improve,True,T1r_late_structure_55_fit attempted 150 = events 150
+attempted_T1r_late_structure_55_fit_N100000_worse,True,T1r_late_structure_55_fit attempted 110 = events 110
+attempted_Tm1_only_m1_N1000_improve,True,Tm1_only_m1 attempted 32 = events 32
+attempted_Tm1_only_m1_N1000_worse,True,Tm1_only_m1 attempted 660 = events 660
+attempted_Tm1_only_m1_N100000_improve,True,Tm1_only_m1 attempted 150 = events 150
+attempted_Tm1_only_m1_N100000_worse,True,Tm1_only_m1 attempted 110 = events 110
+attempted_Tm2_only_m2_N1000_improve,True,Tm2_only_m2 attempted 32 = events 32
+attempted_Tm2_only_m2_N1000_worse,True,Tm2_only_m2 attempted 660 = events 660
+attempted_Tm2_only_m2_N100000_improve,True,Tm2_only_m2 attempted 150 = events 150
+attempted_Tm2_only_m2_N100000_worse,True,Tm2_only_m2 attempted 110 = events 110
+attempted_Tm3_only_m3_N1000_improve,True,Tm3_only_m3 attempted 32 = events 32
+attempted_Tm3_only_m3_N1000_worse,True,Tm3_only_m3 attempted 660 = events 660
+attempted_Tm3_only_m3_N100000_improve,True,Tm3_only_m3 attempted 150 = events 150
+attempted_Tm3_only_m3_N100000_worse,True,Tm3_only_m3 attempted 110 = events 110
+attempted_Tno3_all_but_m3_N1000_improve,True,Tno3_all_but_m3 attempted 32 = events 32
+attempted_Tno3_all_but_m3_N1000_worse,True,Tno3_all_but_m3 attempted 660 = events 660
+attempted_Tno3_all_but_m3_N100000_improve,True,Tno3_all_but_m3 attempted 150 = events 150
+attempted_Tno3_all_but_m3_N100000_worse,True,Tno3_all_but_m3 attempted 110 = events 110
+attempted_Ttrue3_late_with_true_m3_N1000_improve,True,Ttrue3_late_with_true_m3 attempted 32 = events 32
+attempted_Ttrue3_late_with_true_m3_N1000_worse,True,Ttrue3_late_with_true_m3 attempted 660 = events 660
+attempted_Ttrue3_late_with_true_m3_N100000_improve,True,Ttrue3_late_with_true_m3 attempted 150 = events 150
+attempted_Ttrue3_late_with_true_m3_N100000_worse,True,Ttrue3_late_with_true_m3 attempted 110 = events 110
+hold_m3_77pct,True,N=1e3: 470/609 feasible = 77.2%; of attempted 71.2%
+hold_m3_70pct,True,N=1e5: 77/110 feasible = 70.0%; of attempted 70.0%
+T1_keeps_1.2pct,True,8/660
+reduction_89pct,True,"N=1e3 primary 89.3% over 609.0/660.0 feasible (r55 0.0019, endpoint 0.0702, held m3 0.0092); alt A 77.4%"
+m3_em55_positive_all_inits_N1000,True,"EM55 median m3 error > 0 for all 8 inits: {'high': 0.057, 'low': 0.168, 'middle': 0.053, 'rand1': 0.098, 'rand2': 0.067, 'rand3': 0.118, 'rand4': 0.073, 'uniform': 0.093}"
+m3_em55_positive_all_inits_N100000,True,"EM55 median m3 error > 0 for all 8 inits: {'high': 0.03, 'low': 0.126, 'middle': 0.068, 'rand1': 0.08, 'rand2': 0.068, 'rand3': 0.087, 'rand4': 0.064, 'uniform': 0.072}"
+low_init_starts_below,True,low start median relative error at k=0: -0.803
+switch_found_all_N1000,True,660/660 switches found; bracket-start date = EM55 date in all
+switch_found_all_N100000,True,110/110 switches found; bracket-start date = EM55 date in all
+validation_V1,True,EM55 = exactly 55 updates
+validation_V2,True,V2 date mismatches 0
+validation_V3,True,"archived EM30/55/80, NPMLE (raw date) and reconstruction-v1 decisions reproduce exactly"
+validation_V4,True,no monotonicity violations
+witness_population_all,True,601/601
+witness_finite_all,True,1182/1182
+forbidden_suggested_latex.tex_preserves the earlier date,True,'preserves the earlier date' absent from suggested_latex.tex
+forbidden_suggested_latex.tex_preserve the earlier date,True,'preserve the earlier date' absent from suggested_latex.tex
+forbidden_suggested_latex.tex_no such deterioration,True,'no such deterioration' absent from suggested_latex.tex
+forbidden_suggested_latex.tex_helps because,True,'helps because' absent from suggested_latex.tex
+forbidden_suggested_latex.tex_overestimation is not,True,'overestimation is not' absent from suggested_latex.tex
+forbidden_suggested_latex.tex_costs little,True,'costs little' absent from suggested_latex.tex
+forbidden_suggested_latex.tex_more accurately,True,'more accurately' absent from suggested_latex.tex
+forbidden_suggested_latex.tex_converged EM,True,'converged EM' absent from suggested_latex.tex
+forbidden_suggested_latex.tex_every distribution with,True,'every distribution with' absent from suggested_latex.tex
+forbidden_MECHANISM_REPORT.md_costs little,True,'costs little' absent from MECHANISM_REPORT.md
+forbidden_MECHANISM_REPORT.md_Any distribution with the late,True,'Any distribution with the late' absent from MECHANISM_REPORT.md
+"forbidden_MECHANISM_REPORT.md_useful, not accurate",True,"'useful, not accurate' absent from MECHANISM_REPORT.md"
+forbidden_REPORT.md_costs little,True,'costs little' absent from REPORT.md
+forbidden_REPORT.md_converged EM,True,'converged EM' absent from REPORT.md
+forbidden_REPORT.md_Any distribution with the late,True,'Any distribution with the late' absent from REPORT.md
+token_MECHANISM_REPORT.md_**660**,True,'**660**' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_**110**,True,'**110**' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_470 / 609 / 660 (77.2%),True,'470 / 609 / 660 (77.2%)' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_77 / 110 / 110 (70.0%),True,'77 / 110 / 110 (70.0%)' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_**89.3%**,True,'**89.3%**' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_77.4%,True,'77.4%' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_84.8%,True,'84.8%' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_8 / 660 / 660 (1.2%),True,'8 / 660 / 660 (1.2%)' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_2 / 110 / 110 (1.8%),True,'2 / 110 / 110 (1.8%)' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_59.5 -> 5.1,True,'59.5 -> 5.1' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_17.9 -> 16.8,True,'17.9 -> 16.8' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_**-27.0%**,True,'**-27.0%**' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_94.4%,True,'94.4%' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_20.9%,True,'20.9%' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_28 of 30,True,'28 of 30' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_24 of 30,True,'24 of 30' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_30 of 30,True,'30 of 30' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_+5.3% to +16.8%,True,'+5.3% to +16.8%' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_+3.0% to +12.6%,True,'+3.0% to +12.6%' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_76.7% / 90.7%,True,'76.7% / 90.7%' present in MECHANISM_REPORT.md
+token_MECHANISM_REPORT.md_33 cases: 32 improve,True,'33 cases: 32 improve' present in MECHANISM_REPORT.md
+"token_MECHANISM_REPORT.md_Median 1,725",True,"'Median 1,725' present in MECHANISM_REPORT.md"
+"token_MECHANISM_REPORT.md_0.0092 (0.0019, 0.0702)",True,"'0.0092 (0.0019, 0.0702)' present in MECHANISM_REPORT.md"
+"token_MECHANISM_REPORT.md_1,042 of 1,500",True,"'1,042 of 1,500' present in MECHANISM_REPORT.md"
+"token_MECHANISM_REPORT.md_1,366 of 1,500",True,"'1,366 of 1,500' present in MECHANISM_REPORT.md"
+token_REPORT.md_660,True,'660' present in REPORT.md
+token_REPORT.md_110,True,'110' present in REPORT.md
+token_REPORT.md_77.2%,True,'77.2%' present in REPORT.md
+token_REPORT.md_70.0%,True,'70.0%' present in REPORT.md
+token_REPORT.md_0.0004-0.0019,True,'0.0004-0.0019' present in REPORT.md
+token_REPORT.md_89.3%,True,'89.3%' present in REPORT.md
+token_suggested_latex.tex_470/609 (77.2\%),True,'470/609 (77.2\%)' present in suggested_latex.tex
+token_suggested_latex.tex_77/110 (70.0\%),True,'77/110 (70.0\%)' present in suggested_latex.tex
+token_suggested_latex.tex_8/660 (1.2\%),True,'8/660 (1.2\%)' present in suggested_latex.tex
+token_suggested_latex.tex_2/110 (1.8\%),True,'2/110 (1.8\%)' present in suggested_latex.tex
+token_suggested_latex.tex_7/128 (5.5\%),True,'7/128 (5.5\%)' present in suggested_latex.tex
+token_suggested_latex.tex_3/75 (4.0\%),True,'3/75 (4.0\%)' present in suggested_latex.tex
+token_suggested_latex.tex_8/136 (5.9\%),True,'8/136 (5.9\%)' present in suggested_latex.tex
+token_suggested_latex.tex_10/96 (10.4\%),True,'10/96 (10.4\%)' present in suggested_latex.tex
+token_suggested_latex.tex_148/484 (30.6\%),True,'148/484 (30.6\%)' present in suggested_latex.tex
+token_suggested_latex.tex_24/110 (21.8\%),True,'24/110 (21.8\%)' present in suggested_latex.tex
+token_suggested_latex.tex_133/206 (64.6\%),True,'133/206 (64.6\%)' present in suggested_latex.tex
+token_suggested_latex.tex_28/54 (51.9\%),True,'28/54 (51.9\%)' present in suggested_latex.tex
+token_suggested_latex.tex_89.3\%,True,'89.3\%' present in suggested_latex.tex
+token_suggested_latex.tex_84.8\%,True,'84.8\%' present in suggested_latex.tex
+token_suggested_latex.tex_77.4\%,True,'77.4\%' present in suggested_latex.tex
+"token_suggested_latex.tex_1{,}042",True,"'1{,}042' present in suggested_latex.tex"
+"token_suggested_latex.tex_1{,}366",True,"'1{,}366' present in suggested_latex.tex"
+token_suggested_latex.tex_660 of,True,'660 of' present in suggested_latex.tex
+token_suggested_latex.tex_110 of,True,'110 of' present in suggested_latex.tex
+token_suggested_latex.tex_470 of the 609,True,'470 of the 609' present in suggested_latex.tex
+token_suggested_latex.tex_51 cases are infeasible,True,'51 cases are infeasible' present in suggested_latex.tex
+token_suggested_latex.tex_77 of 110,True,'77 of 110' present in suggested_latex.tex
+token_suggested_latex.tex_32 of these,True,'32 of these' present in suggested_latex.tex
+token_suggested_latex.tex_28 of 30,True,'28 of 30' present in suggested_latex.tex
+token_suggested_latex.tex_$+5.3\%$,True,'$+5.3\%$' present in suggested_latex.tex
+token_suggested_latex.tex_$+16.8\%$,True,'$+16.8\%$' present in suggested_latex.tex
+token_suggested_latex.tex_$+3.0\%$,True,'$+3.0\%$' present in suggested_latex.tex
+token_suggested_latex.tex_$+12.6\%$,True,'$+12.6\%$' present in suggested_latex.tex
+token_suggested_latex.tex_98.8\%,True,'98.8\%' present in suggested_latex.tex
+token_suggested_latex.tex_98.2\%,True,'98.2\%' present in suggested_latex.tex
+token_suggested_latex.tex_76.7\%,True,'76.7\%' present in suggested_latex.tex
+token_suggested_latex.tex_90.7\%,True,'90.7\%' present in suggested_latex.tex
+token_suggested_latex.tex_$0.086$,True,'$0.086$' present in suggested_latex.tex
+token_suggested_latex.tex_$0.022$,True,'$0.022$' present in suggested_latex.tex
+token_suggested_latex.tex_94.4\%,True,'94.4\%' present in suggested_latex.tex
+token_suggested_latex.tex_20.9\%,True,'20.9\%' present in suggested_latex.tex

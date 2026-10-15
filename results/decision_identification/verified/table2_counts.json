@@ -1,0 +1,33 @@
+[
+  {
+    "tau": 2,
+    "best_date_identified": 1,
+    "best_date_ambiguous": 29,
+    "available_identified": 3,
+    "act_now": 3,
+    "wait": 0,
+    "available_ambiguous": 27
+  },
+  {
+    "tau": 3,
+    "best_date_identified": 16,
+    "best_date_ambiguous": 14,
+    "available_identified": 18,
+    "act_now": 14,
+    "wait": 4,
+    "available_ambiguous": 12
+  },
+  {
+    "tau": 4,
+    "best_date_identified": 27,
+    "best_date_ambiguous": 3,
+    "available_identified": 28,
+    "act_now": 27,
+    "wait": 1,
+    "available_ambiguous": 2
+  },
+  {
+    "tau": "all",
+    "identified_before_tau": "27/44"
+  }
+]

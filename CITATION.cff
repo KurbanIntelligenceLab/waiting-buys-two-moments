@@ -1,0 +1,26 @@
+# Public metadata, confirmed by the authors on 2026-10-02. Not part of the anonymous
+# review archive. No DOI, acceptance status, publication year or license has been
+# confirmed, so none is recorded.
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Waiting Buys Exactly Two Moments: Endogenous Identification in Prediction-Driven Allocation"
+version: "2026.10"
+authors:
+  - given-names: Rama
+    family-names: AlHamidi
+    affiliation: "Department of Computer and Electrical Engineering, Texas A&M University at Qatar, Doha, Qatar"
+  - given-names: Rasul
+    family-names: Khanbayov
+    affiliation: "College of Science and Engineering, Hamad Bin Khalifa University, Doha, Qatar"
+  - given-names: Erchin
+    family-names: Serpedin
+    affiliation: "Department of Computer and Electrical Engineering, Texas A&M University, College Station, TX, USA"
+  - given-names: Hasan
+    family-names: Kurban
+    affiliation: "College of Science and Engineering, Hamad Bin Khalifa University, Doha, Qatar"
+    email: hkurban@hbku.edu.qa
+contact:
+  - given-names: Hasan
+    family-names: Kurban
+    email: hkurban@hbku.edu.qa

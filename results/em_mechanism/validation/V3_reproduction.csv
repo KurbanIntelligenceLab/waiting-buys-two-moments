@@ -1,0 +1,10 @@
+source,K,n,date_mismatches,max_abs_loglik_diff,raw_date_mismatches,archived_failures,our_invalid,sim_seed_mismatches,date_mismatches_among_valid,validity_mismatches
+early_stopped_robustness_raw,30,1200,0.0,1.6007106751203537e-10,,,,,,
+early_stopped_robustness_raw,55,1200,0.0,2.473825588822365e-10,,,,,,
+early_stopped_robustness_raw,80,1200,0.0,1.4551915228366852e-10,,,,,,
+early_stopped_npmle_raw,55,1200,0.0,,,,,,,
+main_benchmark_raw_all (npmle),-1,1200,31.0,,0.0,0.0,31.0,,,
+matched_info_pairs_raw (em_30),-1,300,,,,,,0.0,0.0,0.0
+matched_info_pairs_raw (em_55),-1,300,,,,,,0.0,0.0,0.0
+matched_info_pairs_raw (em_80),-1,300,,,,,,0.0,0.0,0.0
+matched_info_pairs_raw (certified_npmle),-1,300,,,,,,0.0,0.0,0.0

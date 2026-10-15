@@ -1,0 +1,57 @@
+{
+  "A_moment_map_columns_identical": {
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "B_realized_draws": {
+    "runs": 1200,
+    "runs_with_period_tau_exits": 1200,
+    "draws": 24000,
+    "draws_changed_by_merging": 23957,
+    "draws_changed_by_reversing_split": 23997,
+    "runs_with_any_changed_draw": 1200
+  },
+  "C_bootstrap_law": [
+    {
+      "cell_id": "6c05d3ce08bb",
+      "N": 1000,
+      "seed": 1001,
+      "cells_tested": 6,
+      "min_ks_p": 0.045168457929442574,
+      "max_mean_diff_in_sd": 0.020768319247684894
+    },
+    {
+      "cell_id": "1816f4258455",
+      "N": 100000,
+      "seed": 1011,
+      "cells_tested": 6,
+      "min_ks_p": 0.0962314629443114,
+      "max_mean_diff_in_sd": 0.008978143389238635
+    },
+    {
+      "cell_id": "b1d1ed6b9b63",
+      "N": 100000,
+      "seed": 1001,
+      "cells_tested": 6,
+      "min_ks_p": 0.0576362119216659,
+      "max_mean_diff_in_sd": 0.017381982513092063
+    },
+    {
+      "cell_id": "10ea5ab34b7f",
+      "N": 1000,
+      "seed": 1011,
+      "cells_tested": 6,
+      "min_ks_p": 0.40434502313046394,
+      "max_mean_diff_in_sd": 0.013289206270024664
+    }
+  ],
+  "D_selected_dates": {
+    "runs": 8,
+    "changed": 0,
+    "sample": "random runs of the 1,200 (rng 20261002)",
+    "mean_regret_archived": 0.07782426406969355,
+    "mean_regret_prefailure": 0.07782426406969356
+  },
+  "runtime_s": 3179.626743145
+}

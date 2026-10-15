@@ -1,0 +1,37 @@
+{
+  "window_dependent_inputs": [
+    "main_benchmark_raw_all.csv",
+    "bagged_full_b200_raw.csv",
+    "early_stopped_npmle_raw.csv",
+    "early_stopped_robustness_raw.csv"
+  ],
+  "window_B_source": "results/window_b/ (byte-identical to commit 197fd9e9's results/)",
+  "claims": 29,
+  "match_manuscript_window_A": 29,
+  "match_manuscript_window_B": 8,
+  "by_artifact": {
+    "table3": {
+      "claims": 13,
+      "A_ok": 13,
+      "B_ok": 0
+    },
+    "table4": {
+      "claims": 8,
+      "A_ok": 8,
+      "B_ok": 0
+    },
+    "table5": {
+      "claims": 8,
+      "A_ok": 8,
+      "B_ok": 8
+    }
+  },
+  "artifact_errors": {
+    "A": [],
+    "B": [
+      "FAIL  table3: main_benchmark npmle: 1 expected run keys missing, e.g. [('d0d1e9628423', 100000, 2, 1009)]",
+      "FAIL  table4: Table 4: exclusions are not exactly Beta failures"
+    ]
+  },
+  "cells_file": "results/audit/tables_window_cells.csv"
+}

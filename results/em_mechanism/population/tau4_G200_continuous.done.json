@@ -1,0 +1,22 @@
+{
+ "fingerprint": "32d5e6f9100202fa9d8ad51727bc447dca05d24fa4345142e80de13b3fe172dd",
+ "settings": {
+  "tau": 4,
+  "G": 200,
+  "variant": "continuous",
+  "cap": 1000000,
+  "inits": [
+   "uniform",
+   "low",
+   "middle",
+   "high",
+   "rand1",
+   "rand2",
+   "rand3",
+   "rand4"
+  ],
+  "n_mom": 10,
+  "sharp_delta": 1e-11
+ },
+ "seconds": 103.30396254900006
+}

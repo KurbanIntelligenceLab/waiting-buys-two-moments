@@ -1,0 +1,67 @@
+{
+  "statistic_invariance": {
+    "datasets": 180,
+    "with_period_tau_failures": 180,
+    "window_a_records_changed": 0,
+    "cohort_moments_changed": 0,
+    "cohort_covariance_changed": 0,
+    "path_counts_changed": 180,
+    "window_b_records_changed": 180
+  },
+  "archive_agreement": [
+    {
+      "check": "Table 3 certified NPMLE (bagged_full_b200 'single')",
+      "runs_compared": 1169,
+      "agree_window_A": 1169,
+      "comparable_A": 1169,
+      "agree_window_B": 654,
+      "comparable_B": 1168
+    },
+    {
+      "check": "Table 3/4 certified NPMLE (main_benchmark 'npmle')",
+      "runs_compared": 1200,
+      "agree_window_A": 1170,
+      "comparable_A": 1170,
+      "agree_window_B": 671,
+      "comparable_B": 1199
+    },
+    {
+      "check": "Table 3/4 EM55 (early_stopped_npmle_raw)",
+      "runs_compared": 1200,
+      "agree_window_A": 1200,
+      "comparable_A": 1200,
+      "agree_window_B": 1138,
+      "comparable_B": 1200
+    },
+    {
+      "check": "Window-B archive: certified NPMLE (window_b/bagged_full_b200 'single')",
+      "runs_compared": 1199,
+      "agree_window_A": 655,
+      "comparable_A": 1169,
+      "agree_window_B": 1199,
+      "comparable_B": 1199
+    },
+    {
+      "check": "Window-B archive: EM55 (window_b/early_stopped_npmle_raw)",
+      "runs_compared": 1200,
+      "agree_window_A": 1138,
+      "comparable_A": 1200,
+      "agree_window_B": 1200,
+      "comparable_B": 1200
+    },
+    {
+      "check": "Table 4 Beta (main_benchmark 'parametric_beta')",
+      "runs_compared": 1200,
+      "agree_window_A": 1122,
+      "comparable_A": 1122
+    },
+    {
+      "check": "Window-B archive: Beta (window_b/main_benchmark 'parametric_beta')",
+      "runs_compared": 1200,
+      "agree_window_A": 1122,
+      "comparable_A": 1122
+    }
+  ],
+  "runs": 1200,
+  "runtime_s": 17.93765155699998
+}

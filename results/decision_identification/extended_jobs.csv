@@ -1,0 +1,4 @@
+config_id,distribution,T,beta,tau,n_moments,truth_argmax,prior_status,outcome,identified_date,guaranteed_optimal,uniquely_optimal,earliest_optimal_identified,n_pairs_certified,n_pairs_witness,n_pairs_undecided,n_certificate_leaves,n_lp_boxes,certified_max_advantage_rel,witness_advantage_rel,witness_competitor,seconds
+82d22f34a4dc,beta_1_32,20,0.0005,3,5,4,open,CERTIFIED_UNIQUE,4,yes,yes,yes,18,0,0,1499,2794,-6.435047730961663e-07,,,1279.26
+06380b49a6f3,bimodal,20,0.0005,3,5,4,open,CERTIFIED_UNIQUE,4,yes,yes,yes,18,0,0,1725,3246,-3.0571455719841965e-07,,,2321.88
+1bb4f8059848,beta_1_4,20,0.0005,4,7,4,open,CERTIFIED_UNIQUE,4,yes,yes,yes,18,0,0,1143,2082,-1.524062681203005e-06,,,1618.73

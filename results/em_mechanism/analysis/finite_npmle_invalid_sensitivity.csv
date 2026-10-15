@@ -1,0 +1,5 @@
+kind,N,n_invalid,MSR_x1e3_raw,MSR_x1e3_fallback1,rho_note
+pair,1000,24,4.312648460707593,4.432694787485059,see *_pair_risk.csv for the raw convention
+pair,100000,49,1.5352521835423902,1.6600886051989698,see *_pair_risk.csv for the raw convention
+ref,1000,22,4.4661469398665,4.561416934421568,see *_pair_risk.csv for the raw convention
+ref,100000,45,1.4148780717158584,1.5206261269986776,see *_pair_risk.csv for the raw convention

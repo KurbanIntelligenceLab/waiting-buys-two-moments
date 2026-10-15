@@ -1,0 +1,15 @@
+tau,G,variant,cap_reached,certified
+2,200,continuous,0,40
+2,200,realizable,0,40
+2,400,continuous,2,38
+2,400,realizable,2,38
+2,800,continuous,2,38
+2,800,realizable,2,38
+3,200,continuous,20,20
+3,200,realizable,19,21
+3,400,continuous,20,20
+3,400,realizable,20,20
+4,200,continuous,32,8
+4,200,realizable,32,8
+4,400,continuous,32,8
+4,400,realizable,31,9

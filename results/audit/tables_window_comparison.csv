@@ -1,0 +1,30 @@
+artifact,claim,window_A,window_B,manuscript_fragment,window_B_fragment
+table3,s53_matched,ok,,"The main comparison retains 1,169 shared runs (589 at $N=10^3$, 580 at $N=10^5$), excluding 31 with missing bagging records. CMS returns all 1,200 decisions, including seven using 19 rather than 20 bootstrap draws.",
+table3,s62_matched,ok,,"Its matched comparison retains 1,169 runs.",
+table3,s72_bagging,ok,,"both bootstrap procedures improve on a single NPMLE fit, while ordinary bagging achieves lower MSR than regret calibration at both sample sizes.",
+table3,s72_cms,ok,,"CMS improves on certified NPMLE and, at the larger sample size, outperforms both bagging and regret calibration.",
+table3,s72_em_best,ok,,Table~\ref{tab:decision-performance} shows that early-stopped EM achieves the lowest MSR and highest lower-tail welfare efficiency among the tested non-oracle procedures at both sample sizes.,
+table3,t3_act,ok,,\quad Act immediately & 8.64 & $-4.02$ & 0.8535 & 8.85 & $-7.26$ & 0.8201 \\,
+table3,t3_bagged,ok,,\quad Bagged NPMLE & 3.49 & +1.13 & 0.8683 & 0.59 & +1.01 & 0.9878 \\,
+table3,t3_caption,ok,,"Results at $\tau=2$ on 1,169 matched runs across the two sample sizes.",
+table3,t3_cms,ok,,\quad CMS bootstrap (20 draws) & 3.86 & +0.76 & 0.8683 & 0.35 & +1.24 & 0.9921 \\,
+table3,t3_em55,ok,,\quad Early-stopped EM (55 iterations) & \textbf{0.21} & \textbf{+4.40} & \textbf{0.9964} & \textbf{0.00} & \textbf{+1.59} & \textbf{0.9969} \\,
+table3,t3_npmle,ok,,\quad Certified NPMLE & 4.61 & +0.00 & 0.8672 & 1.60 & +0.00 & 0.9658 \\,
+table3,t3_oracle,ok,,\quad Oracle & 0.00 & +4.61 & 1.0000 & 0.00 & +1.60 & 1.0000 \\,
+table3,t3_rc,ok,,\quad Regret-calibrated & 3.95 & +0.67 & 0.8681 & 0.63 & +0.96 & 0.9878 \\,
+table4,d1_sample,ok,,"Table~\ref{tab:estimator-comparison} uses 525 matched runs at $N=10^3$ and 597 at $N=10^5$. Beta's nonpositive estimated variance excludes 75 and three runs, respectively, from every row.",
+table4,d1_settings,ok,,"Across all 12 $(N,\tau)$ settings, each stopping count reduces MSR relative to certified NPMLE. The 30-iteration estimate improves $p_{10}$ in 11 settings; the 55- and 80-iteration estimates improve it in all 12.",
+table4,s62_estimator_sample,ok,,"The estimator comparison at these same sample sizes and prefix retains 1,122 runs across Beta, certified NPMLE, and all three EM stopping counts.",
+table4,t4_beta,ok,,Parametric Beta & 4.03 & 0.8536 & 3.81 & 0.8536 \\,
+table4,t4_em30,ok,,"EM, 30 iterations & 0.19 & 0.9964 & 0.05 & 0.9964 \\",
+table4,t4_em55,ok,,"EM, 55 iterations & 0.23 & 0.9964 & 0.00 & 0.9969 \\",
+table4,t4_em80,ok,,"EM, 80 iterations & 0.27 & 0.9964 & 0.00 & 0.9969 \\",
+table4,t4_npmle,ok,,Certified NPMLE & 3.37 & 0.8933 & 1.55 & 0.9876 \\,
+table5,d2_envelope,ok,ok,"The envelope procedure matches immediate action on every reported metric, while achieved-welfare LP offers a modest improvement.","The envelope procedure matches immediate action on every reported metric, while achieved-welfare LP offers a modest improvement."
+table5,d2_refinement,ok,ok,"Refinement changes 324 of 801 achieved-welfare-LP firing decisions (40.4\%) and 22 of 7,189 evaluated maximin decisions (0.3\%).","Refinement changes 324 of 801 achieved-welfare-LP firing decisions (40.4\%) and 22 of 7,189 evaluated maximin decisions (0.3\%)."
+table5,d2_sample,ok,ok,"Of 7,200 planned runs, 11 have empty estimated sets; all four rows use the remaining 7,189 runs.","Of 7,200 planned runs, 11 have empty estimated sets; all four rows use the remaining 7,189 runs."
+table5,t5_act,ok,ok,Act immediately & 0.8535 & 0.9475 & 0.9251 & 8.693 & 6.66 \\,Act immediately & 0.8535 & 0.9475 & 0.9251 & 8.693 & 6.66 \\
+table5,t5_caption,ok,ok,"All rows use the same 7,189 runs with nonempty estimated sets, out of 7,200 planned runs.","All rows use the same 7,189 runs with nonempty estimated sets, out of 7,200 planned runs."
+table5,t5_env,ok,ok,Worst-case envelope & 0.8535 & 0.9475 & 0.9251 & 8.693 & 6.66 \\,Worst-case envelope & 0.8535 & 0.9475 & 0.9251 & 8.693 & 6.66 \\
+table5,t5_lp,ok,ok,Achieved-welfare LP & 0.8535 & 0.9539 & 0.9299 & 8.032 & 8.43 \\,Achieved-welfare LP & 0.8535 & 0.9539 & 0.9299 & 8.032 & 8.43 \\
+table5,t5_mm,ok,ok,Maximin welfare & 0.8536 & 0.9933 & 0.9604 & 5.006 & 32.35 \\,Maximin welfare & 0.8536 & 0.9933 & 0.9604 & 5.006 & 32.35 \\

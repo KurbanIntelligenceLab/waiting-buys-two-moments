@@ -1,0 +1,52 @@
+# Code and experiment checks. Publication builds are maintained on main.
+name: ci
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  PYTHONHASHSEED: "0"
+  OPENBLAS_NUM_THREADS: "1"
+  OMP_NUM_THREADS: "1"
+  MPLBACKEND: Agg
+jobs:
+  tests:
+    name: install and tests
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: python -m pip install -c constraints.txt -e ".[test]"
+      - run: python -m pip check
+      - run: python -m pytest -q experiments/tests
+  em-study:
+    name: supplementary EM claims
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: python -m pip install -c constraints.txt -e ".[test]"
+      - run: python -m experiments.em_mechanism.verify_claims
+      - run: git diff --exit-code results/em_mechanism/verification results/em_mechanism/mechanism
+  wheel:
+    name: wheel installation outside the checkout
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: sh setup.sh
+  certificates:
+    name: exact decision certificates
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: python -m pip install -c constraints.txt -e ".[test]"
+      - run: python experiments/scripts/verify_decision_certificates.py --out runs/certificates
