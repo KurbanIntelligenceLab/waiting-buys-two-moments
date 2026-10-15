@@ -27,13 +27,6 @@ decision identification in one reproducible research implementation.
   <img src="teaser.svg" alt="Waiting reveals risk information while reducing intervention opportunities" width="100%">
 </p>
 
-| Component | What you can explore |
-|---|---|
-| **Moment identification** | What short observation prefixes reveal about latent risk |
-| **Allocation timing** | How welfare changes with the intervention date |
-| **Estimation and aggregation** | Certified NPMLE, early-stopped EM, bagging, and regret calibration |
-| **Decision identification** | Exact certificates and compatible-population witnesses |
-| **Mechanism studies** | How continued fitting changes allocation decisions |
 
 ## Installation
 
