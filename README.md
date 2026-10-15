@@ -114,5 +114,3 @@ can take hours.
 Author and software metadata are provided in [CITATION.cff](CITATION.cff).
 Include the repository revision, configuration, seeds, and input
 artifacts when citing a computational result.
-
-The license remains **undecided**. No license or reuse grant has been added.
